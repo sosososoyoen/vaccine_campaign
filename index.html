@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <script src="js/api.js" defer></script>
+      <script src="js/button.js" defer></script>
+      <script src="js/vanilla-tilt.js" defer></script>
+      <script src="js/script.js" defer></script>
+    <title>나만의 백신 인증서 만들기</title>
+</head>
+<body>
+    <ul class="circles">
+        <li class="circle"></li>
+        <li class="circle"></li>
+        <li class="circle"></li>
+        <li class="circle"></li>
+        <li class="circle"></li>
+        <li class="circle"></li>
+        <li class="circle"></li>
+        <li class="circle"></li>
+        <li class="circle"></li>
+        <li class="circle"></li>
+        <li class="circle"></li>
+        <li class="circle"></li>
+        <li class="circle"></li>
+    </ul>
+    <div class="page-container">
+        <header class="main-header">
+            <div class="header__wrap">
+                <h1 class="logo_vaccine">
+                    <a href="#">함께일상
+                        <img src="img/logo.png" alt="함께일상 로고">
+                    </a>
+                </h1>
+                <ul class="header__menu">
+                    <li class="menu__item"><a href="#">홈</a></li>
+                    <li class="menu__item"><a href="#howto">참여방법</a></li>
+                    <li class="menu__item"><a href="sub.html">나만의 인증서 만들기</a></li>
+                </ul>
+
+            </div>
+            <!-- header__wrap -->
+        </header>
+        <ul class="page-numbers">
+            <li><a class="current-page" href="#"></a></li>
+            <li><a href="#howto"></a></li>
+        </ul>
+        <main>
+
+            <section class="main_top section">
+                <div class="inner_wide">
+                    <div class="main__info">
+                        <div class="main__text">
+                            <p class="main__info__subtitle fade-in-bottom">
+                                #백신_인증_캠페인 #함께_일상으로
+                            </p>
+                            <h3 class="main__info__maintitle fade-in-bottom">
+                                백신 접종하고 <br>
+                                <span class="point_gradient">
+                                    나만의 인증서
+                                </span>
+                                 만들자!
+                            </h3>
+                            <button class="btn_go-to-howto btn" >
+                                <span>참여하기</span>
+                                <span class="material-icons">
+                                    keyboard_double_arrow_down
+                                    </span>
+                            </button>
+                        </div>
+                        <!-- main__text -->
+                        <figure  class="main__img" data-tilt>
+                            <img src="img/title_img.png" alt="타이틀이미지">
+                        </figure>
+                    </div>
+                    <!-- main__info -->
+                    <div class="vaccine_count">
+                        <div class="vaccine_count_titleArea">
+                            <h5>전국 백신 접종자 수</h5>
+                            <div class="icon-live">
+                                Live
+                            </div>
+                        </div>
+                        <div class="vaccine__counts">
+                            <div class="vaccine__count__info --first">
+                                <span>1차 접종</span>
+                                <span class="first-vaccine__numbers tracking-in-expand">
+                                    32,800,966
+                                </span>
+                                <div class="first-vaccine__increase fade-in-bottom">
+                                    <span class="first-vaccine__increase__counts">
+                                        650,039
+                                    </span>
+                                    <span class="material-icons">
+                                        arrow_upward
+                                    </span>
+                                    
+                                </div>
+                            </div>
+                            <!-- vaccine_count__first -->
+                            <div class="vaccine__count__info --second">
+                                <span>2차 접종</span>
+                                <span class="second-vaccine__numbers tracking-in-expand">
+                                    32,800,966
+                                </span>
+                                <div class="second-vaccine__increase fade-in-bottom">
+                                    <span class="second-vaccine__increase__counts">
+                                        650,039
+                                    </span>
+                                    <span class="material-icons">
+                                        arrow_upward
+                                    </span>
+                                    
+                                </div>
+                                <!-- vaccine_count__second -->
+                            </div>
+                            <!-- vaccine__counts -->
+                            <!-- vaccine counts -->
+                            <span class="update-date">
+                                기준: 2021-09-11 00:00:00
+                            </span>
+                        </div>
+                    </div>
+                    <!-- vaccine count -->
+                </div>
+            </section>
+            <!-- main_top -->
+    
+    
+            <section id="howto" class="main_howto section">
+                <div class="inner_wide">
+                    <h3 class="section-title">참여방법</h3>
+                    <ul class="howto-card-list">
+                        <li class="howto-card-list-item">
+                            <figure>
+                                <img src="img/card_01.png" alt="백신 접종 인증샷">
+                                <figcaption>
+                                    코로나 19 백신 접종하고<br>
+                                    인증샷 찍기!
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li class="howto-card-list-item">
+                            <figure>
+                                <img src="img/card_02.png" alt="웹사이트 스크린샷">
+                                <figcaption>
+                                    홈페이지에서<br>
+                                    나만의 백신 인증서를 만들고<br>
+                                    이미지 저장하기
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li class="howto-card-list-item">
+                            <figure>
+                                <img src="img/card_03.png" alt="백신 접종 인증샷">
+                                <figcaption>
+                                    백신 접종 인증샷과<br>
+                                    나만의 백신 인증서를<br>
+                                    SNS에 해시태그<br>
+                                    <span class="point_gradient">
+                                        #함께일상 #코로나백신인증
+                                    </span>
+                                    <br>
+                                    와 함께 공유
+                                </figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                    <button class="btn-go-to-sub btn">
+                        <span>인증서 만들기</span>
+                    </button>
+                </div>
+            </section>
+        </main>
+        <footer id="footer" class="section">
+            <ul class="footer__links">
+                <li>
+                    <a href="#">
+                        <img src="img/notion_icon.png" alt="노션으로 이동">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/email_icon.png" alt="노션으로 이동">
+                    </a>
+                    <span class="speech-bubble">
+                        hothemp35@gmail.com
+                    </span>
+                </li>
+            </ul>
+            <span class="footer__copyright">
+                본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.
+                <br>
+                &copy; 2021 LEE SOYEON All Rights Reserved
+            </span>
+        </footer>
+    </div>
+    <!-- page-container -->
+</body>
+</html>

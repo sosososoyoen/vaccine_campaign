@@ -1,0 +1,63 @@
+.btn_go-to-howto {
+  @include btn($color-mint, $color-mint);
+  @extend %gradient2;
+  .material-icons {
+    font-size: 32px;
+  }
+}
+.btn-go-to-sub {
+  @include btn($color-lightpurple, $color-blue);
+  @extend %gradient3;
+}
+.page-numbers {
+  position: fixed;
+  left: 90%;
+  top: 50%;
+  transform: translateY(-50%);
+  li {
+    margin: 2em 0;
+    a {
+      background: $color-green;
+      width: 1em;
+      height: 1em;
+      border-radius: 50%;
+      transition: 0.3s;
+    }
+    .current-page {
+      height: 4em;
+      border-radius: 0.5em;
+    }
+  }
+}
+
+.btn {
+  position: relative;
+  overflow: hidden;
+  span {
+    z-index: 1;
+  }
+  &:hover {
+    box-shadow: rgba($color-purple, 0.25) 0px 13px 27px -5px,
+      rgba($color-purple, 0.3) 0px 8px 16px -8px;
+    &::before {
+      width: 200px;
+      height: 200px;
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%, -50%);
+
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    @extend %gradient3;
+    transition: width 0.5s, height 0.5s;
+  }
+}
+.btn-go-to-sub::before {
+  @extend %gradient2;
+}

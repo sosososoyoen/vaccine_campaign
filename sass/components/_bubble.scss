@@ -1,0 +1,126 @@
+.circles {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: aquamarine;
+    &:first-child {
+      width: 16em;
+      height: 16em;
+      top: -3.6em;
+      left: -4em;
+      @extend %gradient4;
+    }
+    &:nth-child(2) {
+      width: 8em;
+      height: 8em;
+      top: -3em;
+      left: 8em;
+      opacity: 0.5;
+      @include gradient5(0deg);
+    }
+    &:nth-child(3) {
+      width: 18em;
+      height: 18em;
+      top: 38em;
+      left: -5em;
+      opacity: 0.5;
+      @include gradient6(0deg);
+    }
+    &:nth-child(4) {
+      width: 6.8em;
+      height: 6.8em;
+      top: 5em;
+      left: 41em;
+      @include gradient6(-125deg);
+    }
+    &:nth-child(5) {
+      width: 5em;
+      height: 5em;
+      left: 38em;
+      top: 9em;
+      opacity: 0.5;
+      @include gradient7(85deg);
+    }
+    &:nth-child(6) {
+      width: 12em;
+      height: 12em;
+      right: 3em;
+      top: 3em;
+      opacity: 0.5;
+      @include gradient7(-142deg);
+    }
+    &:nth-child(7) {
+      width: 4.1em;
+      height: 4.1em;
+      right: 15em;
+      top: 12em;
+      opacity: 0.5;
+      @include gradient8(32deg);
+    }
+    &:nth-child(8) {
+      width: 9em;
+      height: 9em;
+      right: 4em;
+      top: 35em;
+      opacity: 0.5;
+      @include gradient6(-40deg);
+    }
+    &:nth-child(9) {
+      width: 4em;
+      height: 4em;
+      left: 50%;
+      top: 30em;
+      opacity: 0.5;
+      @include gradient5(0deg);
+    }
+    &:nth-child(10) {
+      width: 4em;
+      height: 4em;
+      left: 55%;
+      top: 55em;
+      opacity: 0.5;
+      @include gradient7(-90deg);
+    }
+    &:nth-child(11) {
+      width: 4em;
+      height: 4em;
+      left: 57%;
+      top: 57em;
+      opacity: 0.3;
+      @include gradient6(-20deg);
+    }
+    &:nth-child(12) {
+      width: 4em;
+      height: 4em;
+      left: 80%;
+      top: 65em;
+      opacity: 0.3;
+      @include gradient5(30deg);
+    }
+    &:nth-child(13) {
+      width: 8em;
+      height: 8em;
+      left: 3em;
+      top: 110em;
+      opacity: 0.5;
+      @include gradient8(32deg);
+    }
+  }
+  .ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-radius: 50%;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    @include ringgradient1(0deg);
+    &:first-child {
+      width: 8em;
+      height: 8em;
+    }
+  }
+}

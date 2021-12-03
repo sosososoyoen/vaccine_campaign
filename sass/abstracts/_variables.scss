@@ -1,0 +1,101 @@
+$color-navy: #0c191f;
+// 그라디언트1
+$color-lightpurple: #b58ecc;
+$color-mint: #0cbaba;
+// 그라디언트2
+$color-green: #43dec8;
+$color-lightblue: #8ce9fa;
+// 그라디언트3
+$color-purple: #c590ff;
+$color-cyan: #76ebff;
+$color-blue: #3977be;
+%gradient1 {
+  background: $color-lightpurple;
+  background: linear-gradient(90deg, $color-lightpurple 16%, $color-mint 100%);
+}
+%gradient2 {
+  background: $color-green;
+  background: linear-gradient(90deg, $color-green 16%, $color-lightblue 100%);
+}
+%gradient3 {
+  background: $color-purple;
+  background: linear-gradient(90deg, $color-purple 16%, $color-cyan 100%);
+}
+//원 그라디언트
+%gradient4 {
+  background: rgb(231, 209, 255);
+  background: linear-gradient(
+    159deg,
+    rgba(231, 209, 255, 1) 16%,
+    rgba(140, 235, 251, 1) 100%
+  );
+}
+@mixin gradient5($deg) {
+  background: rgb(94, 223, 205);
+  background: linear-gradient(
+    $deg,
+    rgba(94, 223, 205, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+@mixin gradient6($deg) {
+  background: rgb(126, 232, 250);
+  background: linear-gradient(
+    $deg,
+    rgba(126, 232, 250, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+@mixin gradient7($deg) {
+  background: #e7d1ff;
+  background: linear-gradient($deg, #e7d1ff 0%, rgba(255, 255, 255, 1) 100%);
+}
+@mixin gradient8($deg) {
+  background: rgb(231, 209, 255);
+  background: linear-gradient(
+    $deg,
+    rgba(231, 209, 255, 1) 0%,
+    rgba(109, 225, 205, 1) 100%
+  );
+}
+// 링 그라디언트
+@mixin ringgradient1($deg) {
+  background-image: linear-gradient(#fff, #fff),
+    linear-gradient(
+      $deg,
+      rgba(231, 209, 255, 1) 0%,
+      rgba(109, 225, 205, 1) 100%
+    );
+}
+
+%titlefont {
+  font-family: "HSGaeulSenggak20";
+}
+%flexcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin increase-style($color) {
+  background: $color;
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+  border-radius: 10px;
+  color: darken($color, 50%);
+  .material-icons {
+    margin-left: 3px;
+  }
+}
+@mixin btn($color1, $color2) {
+  display: flex;
+  color: white;
+  border: none;
+  padding: 0.6em 1.2em;
+  border-radius: 1.8em;
+  cursor: pointer;
+  box-shadow: rgba($color1, 0.25) 0px 13px 27px -5px,
+    rgba($color1, 0.3) 0px 8px 16px -8px;
+  font-size: 1.5rem;
+  text-shadow: 0 0 7px darken($color2, 10%);
+}
