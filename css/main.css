@@ -443,6 +443,16 @@ html {
   transition: width 0.5s, height 0.5s;
 }
 
+.download-btn {
+  font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .circles {
   position: relative;
   width: 100%;
@@ -1003,6 +1013,31 @@ footer {
   width: 100%;
 }
 
+.card-img .check-vaccine {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 48%;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  left: 65%;
+  list-style: url("../img/card-som.png");
+}
+
+.card-img .check-vaccine li {
+  display: list-item;
+}
+
+.card-img .check-vaccine .first-check {
+  margin-right: 3.5em;
+}
+
+.card-img .check-vaccine label {
+  font-family: "Cafe24SsurroundAir";
+  font-size: 1.2rem;
+}
+
 .card-img input#name {
   position: absolute;
   top: 38%;
@@ -1029,6 +1064,22 @@ footer {
 
 .card-img input#name::placeholder {
   font-size: 1rem;
+}
+
+.card-text {
+  font-family: "Cafe24SsurroundAir";
+  font-size: 0.8rem;
+  position: absolute;
+  left: 58%;
+  top: 65%;
+}
+
+.card-text span {
+  display: none;
+}
+
+.card-text .card-text--first {
+  display: block;
 }
 
 .dressup-btns > li {

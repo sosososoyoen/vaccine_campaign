@@ -10,6 +10,8 @@
   width: 75em;
   margin: 0 auto;
 }
+
+//카드
 .card-container {
   width: 40%;
   margin: 2em;
@@ -27,6 +29,24 @@
   img {
     width: 100%;
   }
+  .check-vaccine {
+    display: flex;
+    position: absolute;
+    top: 48%;
+    transform: translateY(50%);
+    left: 65%;
+    list-style: url("../img/card-som.png");
+    li {
+      display: list-item;
+    }
+    .first-check {
+      margin-right: 3.5em;
+    }
+    label {
+      font-family: "Cafe24SsurroundAir";
+      font-size: 1.2rem;
+    }
+  }
   input#name {
     position: absolute;
     top: 38%;
@@ -43,6 +63,20 @@
     }
   }
 }
+.card-text {
+  font-family: "Cafe24SsurroundAir";
+  font-size: 0.8rem;
+  position: absolute;
+  left: 58%;
+  top: 65%;
+  span {
+    display: none;
+  }
+  .card-text--first {
+    display: block;
+  }
+}
+
 .dressup-btns {
   & > li {
     position: relative;
@@ -85,6 +119,7 @@
     }
   }
 }
+
 .sns_link {
   justify-self: flex-end;
   & > li {
