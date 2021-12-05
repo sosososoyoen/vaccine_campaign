@@ -1,28 +1,23 @@
-// html2canvas(document.querySelector(".card-img")).then(canvas => {
-//     document.body.appendChild(canvas)
-// });
+
 const dlBtn = document.querySelector(".download-btn");
 
 dlBtn.addEventListener("click", function(){
-    const element = document.querySelector(".card-img");
-    saveCapture(element)
+    html2canvas(document.querySelector("#capture")).then(canvas => {
+        saveAs(canvas.toDataURL("image/png"),"test.png")
+        //다운로드 되는 파일 이름 지정
+    })
 })
 
-function download(url) {
-    const a = document.createElement('a');
-    a.style.display = "none"
-    a.setAttribute("id","downloader")
-    a.setAttribute("href",url)
-    a.setAttribute("download","test.png")
-    document.body.appendChild(a);
-
-    a.addEventListener("click",()=>{
-        document.body.removeChild(a);
-    })
+// 캡쳐된 파일을 이미지 파일로 내보냄
+function saveAs(uri, filename) {
+    const link = document.createElement("a");
+    if (typeof link.download === 'string') {
+        link.href = uri;
+        link.download = filename;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    } else {
+        window.open(uri);
+    }
 }
-
-function saveCapture(element) {
-    html2canvas(element).then(function(canvas) {
-      download(canvas.toDataURL("image/png"));
-    })
-  }
