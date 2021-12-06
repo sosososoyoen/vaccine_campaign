@@ -54,25 +54,28 @@
                 </ul>
                 <section class="card-container">
                     <div id="capture" class="card-img">
-                        <input type="text" id="name" name="name" placeholder="이름을 입력해주세요" reqiured maxlength="8">
+                        <input type="text" id="name" name="name" placeholder="이름을 입력해주세요" reqiured maxlength="10">
                         <ul class="check-vaccine">    
                             <li class="first-check">
-                                <label for="first">1차</label>
-                                <input type="radio" name="vaccine" id="first" value="first" checked>
+                                <div class="checkbox">
+                                    <span class="check-label">1차</span>
+                                    <input type="checkbox" name="vaccine" id="first" value="first" checked>
+                                    <label for="first">
+                                    </label>
+                                </div>
                             </li>
                             <li class="second-check">
-                                <label for="second">2차</label>
-                                <input type="radio" name="vaccine" id="second" value="second">
+                                <div class="checkbox">
+                                    <span class="check-label">2차</span>
+                                    <input type="checkbox" name="vaccine" id="second" value="second">
+                                    <label for="second">                                      
+                                    </label>
+                                </div>
                             </li>
                         </ul>
-                        <div class="card-text">
-                            <span class="card-text--first">
+                        <span class="card-text">
                                 코로나19 1차 백신 접종 완료했음을 인증합니다.
-                            </span>
-                            <span class="card-text--second">
-                                코로나19 2차 백신 접종 완료했음을 인증합니다.
-                            </span>
-                        </div>
+                        </span>
                         <img src="img/card_glass.png" alt="카드틀">
                     </div>
                     <button class="btn-go-to-sub btn download-btn">                        
@@ -123,6 +126,8 @@
                     </li>
                 </ul>
                 <span class="footer__copyright">
+                    본 페이지에서 제공하는 백신 접종 인증서는 방역패스로 사용하실 수 없습니다.
+                    <br>
                     본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.
                     <br>
                     &copy; 2021 LEE SOYEON All Rights Reserved

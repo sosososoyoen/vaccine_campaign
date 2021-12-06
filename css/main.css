@@ -171,7 +171,7 @@ html {
           font-feature-settings: "liga";
 }
 
-.point_gradient {
+.point_gradient, .card-img .check-vaccine label::before {
   background: #b58ecc;
   background: -webkit-gradient(linear, left top, right top, color-stop(16%, #b58ecc), to(#0cbaba));
   background: linear-gradient(90deg, #b58ecc 16%, #0cbaba 100%);
@@ -966,10 +966,6 @@ footer {
   left: -10%;
 }
 
-.sub-wrap {
-  background-color: #fafafa;
-}
-
 .sub-contents {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -982,7 +978,7 @@ footer {
           align-items: center;
   height: 80vh;
   width: 75em;
-  margin: 0 auto;
+  margin: 2em auto;
 }
 
 .card-container {
@@ -1033,18 +1029,68 @@ footer {
   margin-right: 3.5em;
 }
 
-.card-img .check-vaccine label {
+.card-img .check-vaccine .check-label {
   font-family: "Cafe24SsurroundAir";
+  display: block;
   font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+.card-img .check-vaccine label {
+  width: 1.25rem;
+  height: 1.25rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.card-img .check-vaccine label::after {
+  content: "";
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid #b58ecc;
+  margin-right: 0.5em;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.card-img .check-vaccine label::before {
+  display: none;
+  content: "\2713";
+  font-size: 2.3rem;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-30%, -55%);
+          transform: translate(-30%, -55%);
+}
+
+.card-img .check-vaccine .checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.card-img .check-vaccine input[type="checkbox"] {
+  display: none;
+}
+
+.card-img .check-vaccine input[type="checkbox"]:checked + label::before {
+  display: block;
 }
 
 .card-img input#name {
   position: absolute;
-  top: 38%;
+  top: 40%;
   left: 65%;
   border: none;
   width: 130px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #0c191f;
   background: transparent;
   text-align: center;

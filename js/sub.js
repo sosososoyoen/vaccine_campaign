@@ -21,3 +21,19 @@ function saveAs(uri, filename) {
         window.open(uri);
     }
 }
+
+//체크박스에 클릭이벤트가 발생했을 때 선택된 값만 출력됨
+const checkBoxes = document.querySelectorAll(".check-vaccine input")
+
+checkBoxes.forEach((checkbox,i)=>{
+    checkbox.addEventListener("click",(e)=>{
+        let result="";
+        if(e.target.checked) {
+            result = `코로나19 ${i+1}차 백신 접종 완료했음을 인증합니다.`
+        } else {
+            result = "현재 상태에 체크해주세요.";
+        }
+
+        document.querySelector(".card-text").innerText = result;
+    })
+})
