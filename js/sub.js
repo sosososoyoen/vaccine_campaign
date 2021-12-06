@@ -37,3 +37,13 @@ checkBoxes.forEach((checkbox,i)=>{
         document.querySelector(".card-text").innerText = result;
     })
 })
+
+
+let photoIndex = 1;
+document.querySelector(".hair").addEventListener("click",()=>{
+    photoIndex++;
+    photoIndex %= 4;
+    if(photoIndex ==0) photoIndex = 1;
+    const hairImg = document.querySelector(".chara_hair");
+    hairImg.src= `img/character/hair_0${photoIndex}.png`
+})
