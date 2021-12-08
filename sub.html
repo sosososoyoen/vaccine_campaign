@@ -30,38 +30,65 @@
         </header>
             <!-- header__wrap -->
             <main class="sub-contents">
-                <!-- <div class="chara__custom">
 
-                </div> -->
                 <ul class="dressup-btns">
-                    <li class="hair on">
+                    <li class="hair_btn" data-parts="hair">
                         <span class="material-icons">
                             face_retouching_natural
                         </span>
+
                     </li>
-                    <li class="eye">
+                    <li class="eye_btn" data-parts="eyes">
                         <span class="material-icons">
                             visibility
                             </span>
                     </li>
-                    <li class="mouth">
+                    <li class="mouth_btn" data-parts="mouth">
                         <span class="material-icons">
                             emoji_emotions
                         </span>
                     </li>
-                    <li class="cloth">
+                    <li class="cloth_btn" data-parts="cloth">
                         <span class="material-icons">
                             checkroom
                         </span>
                     </li>
+
                 </ul>
+                <div class="chara__custom__wrap">
+                    <div class="chara__custom">
+                        <div class="chara__custom__info">
+                            <span class="chara__custom__title">
+                                Hair
+                            </span>
+                            <span class="material-icons close-btn">
+                                close
+                                </span>
+                        </div>
+                        <div class="chara__custom__img">
+                            <img src="img/character/hair_01.png" alt="헤어 작은 이미지">
+                        </div>
+                        <button class="chara__custom__btn custom--prev">
+                            <span class="material-icons">
+                                arrow_left
+                                </span>
+                        </button>
+                        <button class="chara__custom__btn custom--next">
+                            <span class="material-icons">
+                                arrow_right
+                                </span>
+                        </button>
+                    </div>
+                    <!-- chara__custom -->
+                </div>
+                <!-- chara__custom__wrap -->
                 <section class="card-container">
                     <div id="capture" class="card-img">
                         <div class="character__area">
-                            <img class="chara_cloth" src="img/character/cloth_01.png" alt="머리">
-                            <img class="chara_hair" src="img/character/hair_01.png" alt="머리">
-                            <img class="chara_mouth" src="img/character/mouth_01.png" alt="입">
-                            <img class="chara_eye" src="img/character/eye_01.png" alt="눈">
+                            <img data-value = "cloth" class="chara_cloth chara-parts" src="img/character/cloth_01.png" alt="머리">
+                            <img data-value = "hair" class="chara_hair chara-parts" src="img/character/hair_01.png" alt="머리">
+                            <img data-value = "mouth" class="chara_mouth chara-parts" src="img/character/mouth_01.png" alt="입">
+                            <img data-value = "eyes" class="chara_eye chara-parts" src="img/character/eyes_01.png" alt="눈">
                             <img class="chara_base"src="img/character/base.png" alt="베이스">
                         </div>
                         <input type="text" id="name" name="name" placeholder="이름을 입력해주세요" reqiured maxlength="10">

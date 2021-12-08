@@ -350,6 +350,48 @@ html {
   }
 }
 
+.scale-in-tl,
+.visible {
+  -webkit-animation: scale-in-tl 0.35s cubic-bezier(0.83, 0, 0.17, 1) both;
+  animation: scale-in-tl 0.35s cubic-bezier(0.83, 0, 0.17, 1) both;
+}
+
+@-webkit-keyframes scale-in-tl {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes scale-in-tl {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 .btn_go-to-howto {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1128,6 +1170,10 @@ footer {
   display: block;
 }
 
+.dressup-btns {
+  position: relative;
+}
+
 .dressup-btns > li {
   position: relative;
   width: 70px;
@@ -1141,6 +1187,7 @@ footer {
 }
 
 .dressup-btns > li > .material-icons {
+  pointer-events: none;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -1216,4 +1263,105 @@ footer {
 
 .character__area img.chara_cloth {
   z-index: 4;
+}
+
+.chara__custom__wrap {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  z-index: 5;
+  left: 25%;
+}
+
+.chara__custom {
+  position: relative;
+  width: 8.75rem;
+  height: 12.5rem;
+  background-color: white;
+  border: 2px solid #c590ff;
+  border-radius: 1em;
+}
+
+.chara__custom .chara__custom__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5em;
+  width: 100%;
+  border-bottom: 1px solid #c590ff;
+}
+
+.chara__custom .chara__custom__info .material-icons {
+  cursor: pointer;
+}
+
+.chara__custom .chara__custom__img {
+  position: relative;
+  width: 6.875em;
+  height: 8.125em;
+  border: 1px solid #76ebff;
+  border-radius: 1em;
+  margin: 0 auto;
+  margin-top: 1em;
+}
+
+.chara__custom .chara__custom__img img {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.chara__custom .chara__custom__btn {
+  border: none;
+  position: absolute;
+  background: #c590ff;
+  padding: 0.7em 0em;
+  border-radius: 0 1em 1em 0;
+  top: 50%;
+  -webkit-transform: translateY(-25%);
+          transform: translateY(-25%);
+  cursor: pointer;
+}
+
+.chara__custom .chara__custom__btn .material-icons {
+  color: white;
+  font-size: 36px;
+}
+
+.chara__custom .chara__custom__btn:hover {
+  background-color: #902aff;
+}
+
+.chara__custom .custom--next {
+  left: 100%;
+}
+
+.chara__custom .custom--prev {
+  right: 100%;
+  border-radius: 1em 0 0 1em;
+}
+
+#hair {
+  top: 20%;
+}
+
+#eyes {
+  top: 30%;
+}
+
+#mouth {
+  top: 40%;
+}
+
+#cloth {
+  top: 50%;
 }
