@@ -125,7 +125,7 @@
                 
                 <ul class="sns_link">
                     <li>
-                        <a href="#">
+                        <a id="btnTwitter" href="javascript:shareSNS('twitter');">
                             <img src="img/icon_twitter.png" alt="트위터 아이콘">
                         </a>
                     </li>
@@ -135,14 +135,22 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a id="btnFacebook" href="javascript:shareSNS('facebook');">
                             <img src="img/icon_fb.png" alt="페북 아이콘">
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a id="btnUrl" href="#">
                             <img src="img/icon_share.png" alt="더보기 아이콘">
                         </a>
+                        <div class="sns_link__copyurl">
+                            <input type="text" value="https://soonmac.github.io/vaccine_campaign/" class="urlInput" readonly />
+                            <button class="btn_urlCopy">URL 복사
+                                <span class="tooltip">복사 완료!</span>
+                            </button>
+                            
+                        </div>
+
                     </li>
                 </ul>
             </main>

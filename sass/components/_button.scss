@@ -67,3 +67,12 @@
   display: flex;
   align-items: center;
 }
+
+.btn_urlCopy {
+  position: relative;
+  border: none;
+  padding: 0.5rem;
+  background-color: $color-mint;
+  color: white;
+  cursor: pointer;
+}

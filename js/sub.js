@@ -171,3 +171,32 @@ function thumbUrl(id) {
         thumb.src = `img/character/${id}_0${clothIndex}.png`
     }
 }
+
+// 자바스크립트 기능 구현하기
+function shareSNS(sns) {
+    const sendText = "백신 접종하고 나만의 인증서 만들자! #함께일상 #코로나백신인증"
+    const sendUrl = "https://soonmac.github.io/vaccine_campaign/";
+    if(sns == "twitter") {
+        const url = "http://twitter.com/share?url="+encodeURIComponent(sendUrl)+"&text="+encodeURIComponent(sendText);
+        window.open(url, "tweetPop", "width=486, height=286,scrollbars=yes");
+    }
+    if( sns == 'facebook' ) {
+        const url = "http://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(sendUrl);
+        window.open(url, "", "width=486, height=286");
+    }
+}
+
+//url 복사 
+const urlInput = document.querySelector(".sns_link__copyurl")
+document.getElementById("btnUrl").addEventListener("click",(e)=>{
+    e.preventDefault();
+    urlInput.classList.toggle("urlInput-show");
+})
+document.querySelector(".btn_urlCopy").addEventListener("click",copyUrl)
+function copyUrl() {
+    const url = document.querySelector(".urlInput")
+    url.select();
+    document.execCommand("copy");
+    document.querySelector(".tooltip").classList.add("tooltip--show");
+
+}

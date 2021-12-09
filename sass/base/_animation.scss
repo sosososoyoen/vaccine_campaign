@@ -106,3 +106,18 @@
     visibility: visible;
   }
 }
+.tooltip--show {
+  -webkit-animation: tooltip-show 2s linear both;
+  animation: tooltip-show 2s linear both;
+}
+@keyframes tooltip-show {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

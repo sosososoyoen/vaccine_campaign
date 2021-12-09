@@ -1,7 +1,3 @@
-.sub-wrap {
-  // background-color: #fafafa;
-}
-
 .sub-contents {
   display: flex;
   justify-content: space-between;
@@ -165,12 +161,60 @@
   justify-self: flex-end;
   & > li {
     margin-bottom: 2em;
-    opacity: 0.5;
     transition: 0.3s;
-    &:hover {
+    a {
+      opacity: 0.5;
+    }
+    &:last-child {
+      position: relative;
+    }
+    &:hover > a {
       opacity: 1;
     }
   }
+}
+.sns_link__copyurl {
+  position: absolute;
+  left: -50%;
+  display: none;
+  width: max-content;
+  .urlInput {
+    padding: 0.5rem;
+  }
+}
+//툴팁
+.tooltip {
+  opacity: 0;
+  display: none;
+  position: absolute;
+  top: -120%;
+  right: -25%;
+  width: 100px;
+  padding: 7px;
+  font-size: 14px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background: rgb(51, 51, 51);
+  border: 0px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  text-shadow: rgba(0, 0, 0, 0.1) 1px 1px 1px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 2px 0px;
+}
+
+.tooltip:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+  top: 90%;
+  left: 40px;
+}
+
+.urlInput-show {
+  display: block;
 }
 .character__area {
   width: 183px;

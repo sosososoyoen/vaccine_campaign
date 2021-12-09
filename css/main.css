@@ -392,6 +392,35 @@ html {
   }
 }
 
+.tooltip--show {
+  -webkit-animation: tooltip-show 2s linear both;
+  animation: tooltip-show 2s linear both;
+}
+
+@-webkit-keyframes tooltip-show {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes tooltip-show {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .btn_go-to-howto {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -493,6 +522,15 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.btn_urlCopy {
+  position: relative;
+  border: none;
+  padding: 0.5rem;
+  background-color: #0cbaba;
+  color: white;
+  cursor: pointer;
 }
 
 .circles {
@@ -1226,13 +1264,68 @@ footer {
 
 .sns_link > li {
   margin-bottom: 2em;
-  opacity: 0.5;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-.sns_link > li:hover {
+.sns_link > li a {
+  opacity: 0.5;
+}
+
+.sns_link > li:last-child {
+  position: relative;
+}
+
+.sns_link > li:hover > a {
   opacity: 1;
+}
+
+.sns_link__copyurl {
+  position: absolute;
+  left: -50%;
+  display: none;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.sns_link__copyurl .urlInput {
+  padding: 0.5rem;
+}
+
+.tooltip {
+  opacity: 0;
+  display: none;
+  position: absolute;
+  top: -120%;
+  right: -25%;
+  width: 100px;
+  padding: 7px;
+  font-size: 14px;
+  text-align: center;
+  color: white;
+  background: #333333;
+  border: 0px solid white;
+  border-radius: 5px;
+  text-shadow: rgba(0, 0, 0, 0.1) 1px 1px 1px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 2px 0px;
+          box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 2px 0px;
+}
+
+.tooltip:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+  top: 90%;
+  left: 40px;
+}
+
+.urlInput-show {
+  display: block;
 }
 
 .character__area {
