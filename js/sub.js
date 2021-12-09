@@ -43,7 +43,6 @@ const charaCustom = document.querySelector(".chara__custom__wrap");
 const customTitle = document.querySelector(".chara__custom__title")
 const hairBtn = document.querySelector(".hair_btn")
 const charaParts = [...document.querySelectorAll(".chara-parts")];
-console.log(charaParts);
 let hairIndex = 1,
     eyesIndex = 1,
     mouthIndex = 1,
@@ -129,8 +128,14 @@ document.querySelector(".custom--prev").addEventListener("click",()=>{
 dressupBtns.forEach(btn => {
     btn.addEventListener("click",(e)=>{
         const partsName = e.target.dataset.parts;
-        customVisible(partsName)
+        dressupBtns.forEach(btn => {
+            if(btn.classList.contains("on")){
+                btn.classList.remove("on")
+                charaCustom.classList.remove("visible")
+            }
+        })
         btn.classList.toggle("on");
+        customVisible(partsName)
     })
     // 커스텀 창의 close 버튼을 눌렀을 때 창이 닫히고 li의 on 클래스를 빼는 함수 
     document.querySelector(".close-btn").addEventListener("click",()=>{

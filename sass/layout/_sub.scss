@@ -68,10 +68,7 @@
         display: none;
         content: "\2713";
         font-size: 2.3rem;
-        // font-stretch: 50%;
-        @extend %gradient1;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: $color-mint;
         position: absolute;
         left: 50%;
         top: 50%;

@@ -171,7 +171,7 @@ html {
           font-feature-settings: "liga";
 }
 
-.point_gradient, .card-img .check-vaccine label::before {
+.point_gradient {
   background: #b58ecc;
   background: -webkit-gradient(linear, left top, right top, color-stop(16%, #b58ecc), to(#0cbaba));
   background: linear-gradient(90deg, #b58ecc 16%, #0cbaba 100%);
@@ -1100,8 +1100,7 @@ footer {
   display: none;
   content: "\2713";
   font-size: 2.3rem;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #0cbaba;
   position: absolute;
   left: 50%;
   top: 50%;
