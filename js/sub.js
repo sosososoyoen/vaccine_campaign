@@ -185,20 +185,16 @@ function shareSNS(sns) {
         window.open(url, "", "width=486, height=286");
     }
     if (sns == "kakaotalk") {
-        Kakao.init('60275652bb70080b75b0b61847ad6641');
-        Kakao.Link.createDefaultButton({
-            container: "#btnKakao",
-            objectType: "feed",
-            content: {
-                title: "#함께일상 나만의 백신 접종 인증서 만들기",
-                description:"백신 접종하고 나만의 인증서 만들자! #함께일상 #코로나백신인증",
-                imageUrl: sendUrl,
-                link: {
-                    mobileWebUrl: sendUrl,
-                    webUrl: sendUrl
-                }
-            }
-        })
+        // Kakao.init('60275652bb70080b75b0b61847ad6641');
+        Kakao.Link.sendCustom({
+            templateId: 677743,
+            templateArgs: {
+              title:
+                '백신 접종하고 나만의 백신 접종 인증서 만들자!',
+              description:
+                '#함께일상 #코로나백신인증',
+            },
+          })
 
     }
 }
