@@ -180,14 +180,38 @@ function shareSNS(sns) {
         const url = "http://twitter.com/share?url="+encodeURIComponent(sendUrl)+"&text="+encodeURIComponent(sendText);
         window.open(url, "tweetPop", "width=486, height=286,scrollbars=yes");
     }
-    if( sns == 'facebook' ) {
+    if(sns == "facebook" ) {
         const url = "http://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(sendUrl);
         window.open(url, "", "width=486, height=286");
     }
+    if (sns == "kakaotalk") {
+        Kakao.init('60275652bb70080b75b0b61847ad6641');
+        Kakao.Link.createDefaultButton({
+            container: "#btnKakao",
+            objectType: "feed",
+            content: {
+                title: "#함께일상 나만의 백신 접종 인증서 만들기",
+                description:"백신 접종하고 나만의 인증서 만들자! #함께일상 #코로나백신인증",
+                imageUrl: sendUrl,
+                link: {
+                    mobileWebUrl: sendUrl,
+                    webUrl: sendUrl
+                }
+            }
+        })
+
+    }
+}
+//카카오톡 공유
+function shareKakao() {
+
+    // 카카오링크버튼 생성
+    Kakao
 }
 
 //url 복사 
 const urlInput = document.querySelector(".sns_link__copyurl")
+const tooltip = document.querySelector(".tooltip")
 document.getElementById("btnUrl").addEventListener("click",(e)=>{
     e.preventDefault();
     urlInput.classList.toggle("urlInput-show");
@@ -197,6 +221,9 @@ function copyUrl() {
     const url = document.querySelector(".urlInput")
     url.select();
     document.execCommand("copy");
-    document.querySelector(".tooltip").classList.add("tooltip--show");
+    tooltip.classList.add("tooltip--show");
+    setTimeout(()=>{
+        tooltip.classList.remove("tooltip--show");
+    },1500)
 
 }

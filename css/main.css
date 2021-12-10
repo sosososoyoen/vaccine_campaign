@@ -393,15 +393,18 @@ html {
 }
 
 .tooltip--show {
-  -webkit-animation: tooltip-show 2s linear both;
-  animation: tooltip-show 2s linear both;
+  -webkit-animation: tooltip-show 1.5s linear both;
+  animation: tooltip-show 1.5s linear both;
 }
 
 @-webkit-keyframes tooltip-show {
   0% {
     opacity: 0;
   }
-  50% {
+  20% {
+    opacity: 1;
+  }
+  80% {
     opacity: 1;
   }
   100% {
@@ -413,7 +416,10 @@ html {
   0% {
     opacity: 0;
   }
-  50% {
+  20% {
+    opacity: 1;
+  }
+  80% {
     opacity: 1;
   }
   100% {
@@ -1295,7 +1301,6 @@ footer {
 
 .tooltip {
   opacity: 0;
-  display: none;
   position: absolute;
   top: -120%;
   right: -25%;
