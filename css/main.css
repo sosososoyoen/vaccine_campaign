@@ -1362,6 +1362,10 @@ footer {
   z-index: 4;
 }
 
+.character__area img.chara_accessory {
+  z-index: 4;
+}
+
 .chara__custom__wrap {
   visibility: hidden;
   opacity: 0;
@@ -1461,4 +1465,8 @@ footer {
 
 #cloth {
   top: 50%;
+}
+
+#accessory {
+  top: 60%;
 }

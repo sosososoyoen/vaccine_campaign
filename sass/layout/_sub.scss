@@ -237,6 +237,9 @@
   img.chara_cloth {
     z-index: 4;
   }
+  img.chara_accessory {
+    z-index: 4;
+  }
 }
 .chara__custom__wrap {
   visibility: hidden;
@@ -316,4 +319,7 @@
 }
 #cloth {
   top: 50%;
+}
+#accessory {
+  top: 60%;
 }

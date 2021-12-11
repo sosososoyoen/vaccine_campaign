@@ -1,9 +1,9 @@
 
 const dlBtn = document.querySelector(".download-btn");
 
-dlBtn.addEventListener("click", function(){
+dlBtn.addEventListener("click", function () {
     html2canvas(document.querySelector("#capture")).then(canvas => {
-        saveAs(canvas.toDataURL("image/png"),"test.png")
+        saveAs(canvas.toDataURL("image/png"), "card.png")
         //다운로드 되는 파일 이름 지정
     })
 })
@@ -25,11 +25,11 @@ function saveAs(uri, filename) {
 //체크박스에 클릭이벤트가 발생했을 때 선택된 값만 출력됨
 const checkBoxes = document.querySelectorAll(".check-vaccine input")
 
-checkBoxes.forEach((checkbox,i)=>{
-    checkbox.addEventListener("click",(e)=>{
-        let result="";
-        if(e.target.checked) {
-            result = `코로나19 ${i+1}차 백신 접종 완료했음을 인증합니다.`
+checkBoxes.forEach((checkbox, i) => {
+    checkbox.addEventListener("click", (e) => {
+        let result = "";
+        if (e.target.checked) {
+            result = `코로나19 ${i + 1}차 백신 접종 완료했음을 인증합니다.`
         } else {
             result = "현재 상태에 체크해주세요.";
         }
@@ -46,7 +46,8 @@ const charaParts = [...document.querySelectorAll(".chara-parts")];
 let hairIndex = 1,
     eyesIndex = 1,
     mouthIndex = 1,
-    clothIndex = 1;
+    clothIndex = 1,
+    accIndex = 1;
 let thumb = document.querySelector(".chara__custom__img > img")
 
 //이미지의 링크를 바꾸는 함수
@@ -54,82 +55,93 @@ function partsImgChange(id, index) {
     console.log(id);
     const partsImg = charaParts.find(element => element.dataset.value == id)
     console.log(partsImg);
-    partsImg.src= `img/character/${id}_0${index}.png`
+    partsImg.src = `img/character/${id}_0${index}.png`
     thumb.src = `img/character/${id}_0${index}.png`
 }
 //커스텀 창의 다음 버튼을 눌렀을 때 다음 사진으로 바뀌는 함수
 function nextPhoto(id) {
-    if (id== "hair") {
+    if (id == "hair") {
         hairIndex++;
-        hairIndex %= 4;
-        if(hairIndex ==0) hairIndex = 1;
-        partsImgChange(id,hairIndex);
+        hairIndex %= 49;
+        if (hairIndex == 0) hairIndex = 1;
+        partsImgChange(id, hairIndex);
     }
     if (id == "eyes") {
         eyesIndex++;
-        eyesIndex %= 11;
-        if(eyesIndex ==0) eyesIndex = 1;
-        partsImgChange(id,eyesIndex);
+        eyesIndex %= 13;
+        if (eyesIndex == 0) eyesIndex = 1;
+        partsImgChange(id, eyesIndex);
     }
     if (id == "mouth") {
         mouthIndex++;
         mouthIndex %= 11;
-        if(mouthIndex ==0) mouthIndex = 1;
-        partsImgChange(id,mouthIndex);
+        if (mouthIndex == 0) mouthIndex = 1;
+        partsImgChange(id, mouthIndex);
     }
     if (id == "cloth") {
         clothIndex++;
-        clothIndex %= 4;
-        if(clothIndex ==0) clothIndex = 1;
-        partsImgChange(id,clothIndex);
+        clothIndex %= 8;
+        if (clothIndex == 0) clothIndex = 1;
+        partsImgChange(id, clothIndex);
     }
-
+    if (id == "accessory") {
+        accIndex ++;
+        accIndex  %= 5;
+        if (accIndex  == 0) accIndex  = 1;
+        partsImgChange(id, accIndex);
+    }
 }
 //커스텀 창의 이전 버튼을 눌렀을 때 이전 사진으로 바뀌는 함수
 function prevPhoto(id) {
-    if (id== "hair") {
+    if (id == "hair") {
         hairIndex--;
-        hairIndex %= 4;
-        if(hairIndex ==0) hairIndex = 1;
-        partsImgChange(id,hairIndex);
+        hairIndex %= 49;
+        if (hairIndex == 0) hairIndex = 1;
+        partsImgChange(id, hairIndex);
     }
     if (id == "eyes") {
         eyesIndex--;
-        eyesIndex %= 11;
-        if(eyesIndex ==0) eyesIndex = 1;
-        partsImgChange(id,eyesIndex);
+        eyesIndex %= 13;
+        if (eyesIndex == 0) eyesIndex = 1;
+        partsImgChange(id, eyesIndex);
     }
     if (id == "mouth") {
         mouthIndex--;
         mouthIndex %= 11;
-        if(mouthIndex ==0) mouthIndex = 1;
-        partsImgChange(id,mouthIndex);
+        if (mouthIndex == 0) mouthIndex = 1;
+        partsImgChange(id, mouthIndex);
     }
     if (id == "cloth") {
         clothIndex--;
-        clothIndex %= 4;
-        if(clothIndex ==0) clothIndex = 1;
-        partsImgChange(id,clothIndex);
+        clothIndex %= 8;
+        if (clothIndex == 0) clothIndex = 1;
+        partsImgChange(id, clothIndex);
+    }
+    if (id == "accessory") {
+        accIndex --;
+        accIndex  %= 5;
+        if (accIndex  == 0) accIndex  = 1;
+        partsImgChange(id, accIndex);
     }
 
 }
 //커스텀 창의 다음 버튼 클릭 이벤트
-document.querySelector(".custom--next").addEventListener("click",()=>{
+document.querySelector(".custom--next").addEventListener("click", () => {
     const id = charaCustom.id;
     nextPhoto(id);
 })
 //커스텀 창의 이전버튼 클릭 이벤트
-document.querySelector(".custom--prev").addEventListener("click",()=>{
+document.querySelector(".custom--prev").addEventListener("click", () => {
     const id = charaCustom.id;
     prevPhoto(id)
 })
 
 //버튼 클릭 이벤트 : 커스텀 창이 뜨는 함수
 dressupBtns.forEach(btn => {
-    btn.addEventListener("click",(e)=>{
+    btn.addEventListener("click", (e) => {
         const partsName = e.target.dataset.parts;
         dressupBtns.forEach(btn => {
-            if(btn.classList.contains("on")){
+            if (btn.classList.contains("on")) {
                 btn.classList.remove("on")
                 charaCustom.classList.remove("visible")
             }
@@ -138,7 +150,7 @@ dressupBtns.forEach(btn => {
         customVisible(partsName)
     })
     // 커스텀 창의 close 버튼을 눌렀을 때 창이 닫히고 li의 on 클래스를 빼는 함수 
-    document.querySelector(".close-btn").addEventListener("click",()=>{
+    document.querySelector(".close-btn").addEventListener("click", () => {
         btn.classList.remove("on");
         charaCustom.classList.remove("visible")
     })
@@ -148,17 +160,17 @@ dressupBtns.forEach(btn => {
 
 // 커스텀 창에 해당 파츠 데이터를 전달해서 보여주는 함수
 function customVisible(partsName) {
-    charaCustom.id= partsName
+    charaCustom.id = partsName
     const id = charaCustom.id;
     customTitle.innerHTML = id;
     console.log(id);
     thumbUrl(id);
     charaCustom.classList.toggle("visible")
-    
+
 }
 
 function thumbUrl(id) {
-    if (id== "hair") {
+    if (id == "hair") {
         thumb.src = `img/character/${id}_0${hairIndex}.png`
     }
     if (id == "eyes") {
@@ -170,18 +182,21 @@ function thumbUrl(id) {
     if (id == "cloth") {
         thumb.src = `img/character/${id}_0${clothIndex}.png`
     }
+    if (id == "accessory") {
+        thumb.src = `img/character/${id}_0${accIndex}.png`
+    }
 }
 
 // 자바스크립트 기능 구현하기
 function shareSNS(sns) {
     const sendText = "백신 접종하고 나만의 인증서 만들자! #함께일상 #코로나백신인증"
     const sendUrl = "https://soonmac.github.io/vaccine_campaign/";
-    if(sns == "twitter") {
-        const url = "http://twitter.com/share?url="+encodeURIComponent(sendUrl)+"&text="+encodeURIComponent(sendText);
+    if (sns == "twitter") {
+        const url = "http://twitter.com/share?url=" + encodeURIComponent(sendUrl) + "&text=" + encodeURIComponent(sendText);
         window.open(url, "tweetPop", "width=486, height=286,scrollbars=yes");
     }
-    if(sns == "facebook" ) {
-        const url = "http://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(sendUrl);
+    if (sns == "facebook") {
+        const url = "http://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(sendUrl);
         window.open(url, "", "width=486, height=286");
     }
     if (sns == "kakaotalk") {
@@ -189,12 +204,12 @@ function shareSNS(sns) {
         Kakao.Link.sendCustom({
             templateId: 677743,
             templateArgs: {
-              title:
-                '백신 접종하고 나만의 백신 접종 인증서 만들자!',
-              description:
-                '#함께일상 #코로나백신인증',
+                title:
+                    '백신 접종하고 나만의 백신 접종 인증서 만들자!',
+                description:
+                    '#함께일상 #코로나백신인증',
             },
-          })
+        })
 
     }
 }
@@ -208,18 +223,18 @@ function shareKakao() {
 //url 복사 
 const urlInput = document.querySelector(".sns_link__copyurl")
 const tooltip = document.querySelector(".tooltip")
-document.getElementById("btnUrl").addEventListener("click",(e)=>{
+document.getElementById("btnUrl").addEventListener("click", (e) => {
     e.preventDefault();
     urlInput.classList.toggle("urlInput-show");
 })
-document.querySelector(".btn_urlCopy").addEventListener("click",copyUrl)
+document.querySelector(".btn_urlCopy").addEventListener("click", copyUrl)
 function copyUrl() {
     const url = document.querySelector(".urlInput")
     url.select();
     document.execCommand("copy");
     tooltip.classList.add("tooltip--show");
-    setTimeout(()=>{
+    setTimeout(() => {
         tooltip.classList.remove("tooltip--show");
-    },1500)
+    }, 1500)
 
 }
