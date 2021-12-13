@@ -52,9 +52,7 @@ let thumb = document.querySelector(".chara__custom__img > img")
 
 //이미지의 링크를 바꾸는 함수
 function partsImgChange(id, index) {
-    console.log(id);
     const partsImg = charaParts.find(element => element.dataset.value == id)
-    console.log(partsImg);
     partsImg.src = `img/character/${id}_0${index}.png`
     thumb.src = `img/character/${id}_0${index}.png`
 }
@@ -163,7 +161,6 @@ function customVisible(partsName) {
     charaCustom.id = partsName
     const id = charaCustom.id;
     customTitle.innerHTML = id;
-    console.log(id);
     thumbUrl(id);
     charaCustom.classList.toggle("visible")
 

@@ -66,6 +66,14 @@
   font-size: 1.5rem;
   display: flex;
   align-items: center;
+  @include mobile {
+    font-size: 1rem;
+  }
+  .material-icons {
+    @include mobile {
+      font-size: 100%;
+    }
+  }
 }
 
 .btn_urlCopy {
@@ -75,4 +83,22 @@
   background-color: $color-mint;
   color: white;
   cursor: pointer;
+  @include mobile {
+    padding: 0.3rem;
+    font-size: 50%;
+  }
+}
+.btn_mobile-menu {
+  display: none;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  margin: 1em;
+  .material-icons {
+    color: $color-navy;
+    font-size: 32px;
+  }
+  @include tablet {
+    display: block;
+  }
 }

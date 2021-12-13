@@ -4,6 +4,9 @@
   height: 80px;
   z-index: 5;
   transition: 0.3s;
+  @include tablet {
+    position: relative;
+  }
 }
 .header--fixed {
   background-color: white;
@@ -15,16 +18,45 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @include tablet {
+    width: 100vw;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
 }
 .logo_vaccine {
   a {
     color: transparent;
     font-size: 0;
+    img {
+      @include tablet {
+        width: 90%;
+      }
+      @include mobile {
+        width: 60%;
+      }
+    }
   }
 }
 .header__menu {
   display: flex;
   width: 40%;
+  @include tablet {
+    display: block;
+    width: 30%;
+    height: 100vh;
+    position: absolute;
+    top: 82%;
+    right: -30%;
+    @include gradient8(180deg);
+    z-index: 3;
+    transition: 0.3s;
+  }
+  @include mobile {
+    width: 50%;
+    right: -50%;
+  }
+
   li {
     position: relative;
     a {

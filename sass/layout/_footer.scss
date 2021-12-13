@@ -5,6 +5,12 @@ footer {
   justify-content: center;
   font-size: 0.8rem;
   padding: 2em;
+  @include tablet {
+    margin-top: 2rem;
+  }
+  @include mobile {
+    font-size: 80%;
+  }
 }
 .footer__links {
   display: flex;

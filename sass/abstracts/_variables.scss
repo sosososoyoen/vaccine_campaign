@@ -99,3 +99,8 @@ $color-blue: #3977be;
   font-size: 1.5rem;
   text-shadow: 0 0 7px darken($color2, 10%);
 }
+
+//미디어쿼리
+$breakpoint-mobile: 335px;
+$breakpoint-tablet: 758px;
+$breakpoint-desktop: 1024px;

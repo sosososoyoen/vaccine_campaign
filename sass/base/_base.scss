@@ -10,6 +10,12 @@ html {
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  @include tablet {
+    font-size: 80%;
+  }
+  @include mobile {
+    font-size: 70%;
+  }
 }
 .point_gradient {
   @extend %gradient1;

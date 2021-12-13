@@ -1,27 +1,37 @@
 .sub-contents {
   display: flex;
   justify-content: space-between;
+  position: relative;
   align-items: center;
   height: 80vh;
   width: 75em;
   margin: 2em auto;
+  @include tablet {
+    width: 100vw;
+    flex-direction: column;
+    height: max-content;
+  }
 }
 
 //카드
 .card-container {
-  width: 40%;
-  margin: 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
-
   .btn {
     margin-top: 2em;
   }
+  @include tablet {
+    margin: 3rem 0;
+  }
 }
 .card-img {
-  width: 800px;
+  width: 50rem;
   position: relative;
+  @include tablet {
+    width: 90%;
+    font-size: 90%;
+  }
   img {
     width: 100%;
   }
@@ -32,11 +42,14 @@
     transform: translateY(50%);
     left: 65%;
     list-style: url("../img/card-som.png");
+    @include mobile {
+      font-size: 10px;
+    }
     li {
       display: list-item;
     }
     .first-check {
-      margin-right: 3.5em;
+      margin-right: 3.5rem;
     }
     .check-label {
       font-family: "Cafe24SsurroundAir";
@@ -50,7 +63,14 @@
       cursor: pointer;
       position: relative;
       &::after {
-        // position: absolute;
+        @include tablet {
+          width: 90%;
+          height: 90%;
+        }
+        @include mobile {
+          width: 60%;
+          height: 60%;
+        }
         content: "";
         display: inline-block;
         width: 1.25rem;
@@ -69,6 +89,9 @@
         left: 50%;
         top: 50%;
         transform: translate(-30%, -55%);
+        @include tablet {
+          transform: translate(-30%, -60%);
+        }
       }
     }
     .checkbox {
@@ -87,20 +110,39 @@
     top: 40%;
     left: 65%;
     border: none;
-    width: 130px;
+    width: 16.2%;
     @extend %titlefont;
     font-size: 1.2rem;
     color: $color-navy;
     background: transparent;
     text-align: center;
+    @include tablet {
+      font-size: 1rem;
+    }
+    @include mobile {
+      font-size: 50%;
+      top: 38%;
+    }
     &::placeholder {
       font-size: 1rem;
+      @include tablet {
+        font-size: 1rem;
+      }
+      @include mobile {
+        font-size: 50%;
+      }
     }
   }
 }
 .card-text {
   font-family: "Cafe24SsurroundAir";
   font-size: 0.8rem;
+  @include tablet {
+    font-size: 90%;
+  }
+  @include tablet {
+    font-size: 50%;
+  }
   position: absolute;
   left: 58%;
   top: 65%;
@@ -114,16 +156,27 @@
 
 .dressup-btns {
   position: relative;
+  @include tablet {
+    display: flex;
+  }
   & > li {
     position: relative;
-    width: 70px;
-    height: 70px;
+    width: 4.375rem;
+    height: 4.375rem;
     background-color: white;
     border-radius: 50%;
     border: dashed 3px #dbdbdb;
-    margin-bottom: 2em;
+    margin-bottom: 2rem;
     text-align: center;
     cursor: pointer;
+    @include tablet {
+      margin: 1rem;
+    }
+    @include mobile {
+      margin: 0.5rem;
+      width: 3rem;
+      height: 3rem;
+    }
 
     & > .material-icons {
       pointer-events: none;
@@ -133,6 +186,9 @@
       transform: translate(-50%, -50%);
       font-size: 36px;
       color: gray;
+      @include mobile {
+        font-size: 24px;
+      }
     }
   }
   .on {
@@ -140,6 +196,9 @@
     & > .material-icons {
       font-size: 42px;
       color: $color-navy;
+      @include mobile {
+        font-size: 30px;
+      }
     }
     &:after {
       position: absolute;
@@ -159,6 +218,9 @@
 
 .sns_link {
   justify-self: flex-end;
+  @include tablet {
+    display: flex;
+  }
   & > li {
     margin-bottom: 2em;
     transition: 0.3s;
@@ -171,6 +233,17 @@
     &:hover > a {
       opacity: 1;
     }
+    @include tablet {
+      margin: 1rem;
+    }
+    @include mobile {
+      margin: 0.7rem;
+    }
+    img {
+      @include mobile {
+        width: 80%;
+      }
+    }
   }
 }
 .sns_link__copyurl {
@@ -178,8 +251,16 @@
   left: -50%;
   display: none;
   width: max-content;
+  @include mobile {
+    left: -100%;
+  }
   .urlInput {
     padding: 0.5rem;
+    @include mobile {
+      width: 30%;
+      padding: 0.3rem;
+      font-size: 50%;
+    }
   }
 }
 //툴팁
@@ -216,12 +297,13 @@
   display: block;
 }
 .character__area {
-  width: 183px;
-  height: 183px;
+  width: 22.8%;
+  height: 22.8%;
   background-color: transparent;
   position: absolute;
   top: 37.5%;
   left: 16%;
+
   img {
     position: absolute;
   }
@@ -246,7 +328,7 @@
   opacity: 0;
   position: absolute;
   z-index: 5;
-  left: 25%;
+  left: 10%;
 }
 .chara__custom {
   position: relative;
@@ -263,18 +345,18 @@
     padding: 0.5em;
     width: 100%;
     border-bottom: 1px solid $color-purple;
+
     .material-icons {
       cursor: pointer;
     }
   }
   .chara__custom__img {
     position: relative;
-    width: 6.875em;
-    height: 8.125em;
+    width: 80%;
+    height: 60%;
     border: 1px solid $color-cyan;
     border-radius: 1em;
-    margin: 0 auto;
-    margin-top: 1em;
+    margin: 1.5em auto;
     img {
       position: absolute;
       width: 100%;
@@ -310,16 +392,36 @@
 }
 #hair {
   top: 20%;
+  @include tablet {
+    top: 10%;
+    left: 20%;
+  }
 }
 #eyes {
   top: 30%;
+  @include tablet {
+    top: 10%;
+    left: 30%;
+  }
 }
 #mouth {
   top: 40%;
+  @include tablet {
+    top: 10%;
+    left: 40%;
+  }
 }
 #cloth {
   top: 50%;
+  @include tablet {
+    top: 10%;
+    left: 50%;
+  }
 }
 #accessory {
   top: 60%;
+  @include tablet {
+    top: 10%;
+    left: 60%;
+  }
 }
