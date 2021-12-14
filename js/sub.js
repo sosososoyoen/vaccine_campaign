@@ -3,7 +3,7 @@ const dlBtn = document.querySelector(".download-btn");
 
 dlBtn.addEventListener("click", function () {
     if(window.innerWidth < 1024) {
-        document.querySelector("#capture").setAttribute("content", "width=800px")
+        document.querySelector("#capture").setAttribute("style", "width=800px")
     }
     html2canvas(document.querySelector("#capture")).then(canvas => {
         saveAs(canvas.toDataURL("image/png"), "card.png")
