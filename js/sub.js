@@ -2,10 +2,10 @@
 const dlBtn = document.querySelector(".download-btn");
 
 dlBtn.addEventListener("click", function () {
-    if(window.innerWidth < 1024) {
-        document.querySelector("#capture").setAttribute("style", "width=800px")
-    }
     html2canvas(document.querySelector("#capture")).then(canvas => {
+        if(window.innerWidth < 1024) {
+            document.querySelector("#capture").setAttribute("style", "width=800px")
+        }
         saveAs(canvas.toDataURL("image/png"), "card.png")
         //다운로드 되는 파일 이름 지정
     })
