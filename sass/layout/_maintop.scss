@@ -3,14 +3,35 @@
   margin: 90px 0 0;
   height: 100vh;
   @extend %flexcenter;
+  @include tablet {
+    padding: 1rem;
+  }
+  @include mobile {
+    margin: 0;
+  }
 }
-
+.main__img {
+  @include tablet {
+    width: 50%;
+  }
+  @include mobile {
+    width: 80%;
+  }
+  img {
+    width: 100%;
+  }
+}
 .main__info {
   width: 100%;
   margin-bottom: 8em;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @include mobile {
+    justify-content: center;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
 }
 .main__info__subtitle {
   margin-bottom: 1rem;
@@ -18,6 +39,13 @@
   animation-delay: 0.2s;
   transform: translateY(50px);
   opacity: 0;
+}
+.main__text {
+  width: 50%;
+  @include mobile {
+    margin-top: 2rem;
+    width: 90%;
+  }
 }
 .main__info__maintitle {
   @extend %titlefont;
@@ -27,6 +55,9 @@
   transform: translateY(50px);
   opacity: 0;
   animation-delay: 0.5s;
+  @include tablet {
+    font-size: 3rem;
+  }
 }
 .vaccine_count {
   width: max-content;
@@ -73,6 +104,11 @@
     margin-top: 0.5em;
     line-height: 1.6;
     animation-delay: 0.7s;
+  }
+  .icon_upward {
+    @include tablet {
+      font-size: 120%;
+    }
   }
 }
 .--second {

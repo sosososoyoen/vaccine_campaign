@@ -4,17 +4,22 @@ body {
 }
 html {
   scroll-behavior: smooth;
+  @include tablet {
+    font-size: 80%;
+  }
+  @include mobile {
+    font-size: 60%;
+  }
 }
 .page-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+}
+.main {
   @include tablet {
-    font-size: 80%;
-  }
-  @include mobile {
-    font-size: 70%;
+    width: 100vw;
   }
 }
 .point_gradient {
@@ -29,4 +34,7 @@ html {
   align-items: center;
   justify-content: center;
   width: 75em;
+  @include tablet {
+    width: 100vw;
+  }
 }

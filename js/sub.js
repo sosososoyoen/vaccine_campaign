@@ -32,7 +32,7 @@ checkBoxes.forEach((checkbox, i) => {
     checkbox.addEventListener("click", (e) => {
         let result = "";
         if (e.target.checked) {
-            result = `코로나19 ${i + 1}차 백신 접종 완료했음을 인증합니다.`
+            result = `코로나19 ${i + 1}차 백신 접종했음을 인증합니다.`
         } else {
             result = "현재 상태에 체크해주세요.";
         }

@@ -36,41 +36,54 @@
     width: 100%;
   }
   .check-vaccine {
+    width: 25%;
     display: flex;
     position: absolute;
     top: 48%;
     transform: translateY(50%);
     left: 65%;
     list-style: url("../img/card-som.png");
+    @include mobile-sm {
+      top: 45%;
+      width: 30%;
+      list-style: url("../img/card-som_sm.png");
+    }
     @include mobile {
-      font-size: 10px;
+      width: 30%;
+      list-style: url("../img/card-som_m.png");
     }
     li {
       display: list-item;
     }
     .first-check {
       margin-right: 3.5rem;
+      @include mobile {
+        margin-right: 3rem;
+      }
     }
     .check-label {
       font-family: "Cafe24SsurroundAir";
       display: block;
       font-size: 1.2rem;
       margin-right: 0.5rem;
+      @include mobile-sm {
+        display: inline-block;
+        width: max-content;
+        font-size: 60%;
+        margin-right: 0.2rem;
+        position: relative;
+        left: -5px;
+      }
     }
     label {
       width: 1.25rem;
       height: 1.25rem;
       cursor: pointer;
       position: relative;
+      @include mobile-sm {
+        left: -5px;
+      }
       &::after {
-        @include tablet {
-          width: 90%;
-          height: 90%;
-        }
-        @include mobile {
-          width: 60%;
-          height: 60%;
-        }
         content: "";
         display: inline-block;
         width: 1.25rem;
@@ -79,6 +92,13 @@
         margin-right: 0.5em;
         border-radius: 50%;
         background-color: white;
+        @include tablet {
+        }
+        @include mobile-sm {
+          width: 80%;
+          height: 80%;
+          border: 1px solid $color-lightpurple;
+        }
       }
       &::before {
         display: none;
@@ -92,11 +112,25 @@
         @include tablet {
           transform: translate(-30%, -60%);
         }
+        @include mobile {
+          transform: translate(-30%, -60%);
+        }
+        @include mobile-sm {
+          transform: translate(-40%, -70%);
+        }
       }
     }
     .checkbox {
       display: flex;
-      align-items: flex-end;
+      align-items: center;
+      &:first-child {
+        @include mobile {
+          margin-right: 0.5rem;
+        }
+        @include mobile-sm {
+          margin-right: 0;
+        }
+      }
     }
     input[type="checkbox"] {
       display: none;
@@ -119,7 +153,7 @@
     @include tablet {
       font-size: 1rem;
     }
-    @include mobile {
+    @include mobile-sm {
       font-size: 50%;
       top: 38%;
     }
@@ -137,15 +171,20 @@
 .card-text {
   font-family: "Cafe24SsurroundAir";
   font-size: 0.8rem;
-  @include tablet {
-    font-size: 90%;
-  }
-  @include tablet {
-    font-size: 50%;
-  }
+  display: block;
   position: absolute;
   left: 58%;
   top: 65%;
+  @include tablet {
+    font-size: 100%;
+  }
+  @include mobile {
+    left: 52%;
+  }
+  @include mobile-sm {
+    -webkit-transform: scale(0.75);
+    left: 46%;
+  }
   span {
     display: none;
   }
@@ -174,8 +213,6 @@
     }
     @include mobile {
       margin: 0.5rem;
-      width: 3rem;
-      height: 3rem;
     }
 
     & > .material-icons {
@@ -342,7 +379,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5em;
+    padding: 0.5rem;
     width: 100%;
     border-bottom: 1px solid $color-purple;
 
@@ -353,10 +390,11 @@
   .chara__custom__img {
     position: relative;
     width: 80%;
-    height: 60%;
+    height: 55%;
     border: 1px solid $color-cyan;
-    border-radius: 1em;
-    margin: 1.5em auto;
+    border-radius: 1rem;
+    margin: 1.5rem auto;
+    overflow: hidden;
     img {
       position: absolute;
       width: 100%;
@@ -370,13 +408,16 @@
     position: absolute;
     background: $color-purple;
     padding: 0.7em 0em;
-    border-radius: 0 1em 1em 0;
+    border-radius: 0 1rem 1rem 0;
     top: 50%;
     transform: translateY(-25%);
     cursor: pointer;
     .material-icons {
       color: white;
       font-size: 36px;
+      @include mobile-sm {
+        font-size: 24px;
+      }
     }
     &:hover {
       background-color: darken($color-purple, 20%);
@@ -387,7 +428,7 @@
   }
   .custom--prev {
     right: 100%;
-    border-radius: 1em 0 0 1em;
+    border-radius: 0.6rem 0 0 0.6rem;
   }
 }
 #hair {

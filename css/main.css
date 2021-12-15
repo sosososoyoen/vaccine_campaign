@@ -281,6 +281,18 @@ html {
   scroll-behavior: smooth;
 }
 
+@media screen and (max-width: 1199px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+@media screen and (max-width: 757px) {
+  html {
+    font-size: 60%;
+  }
+}
+
 .page-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -295,15 +307,9 @@ html {
   overflow: hidden;
 }
 
-@media screen and (max-width: 1023px) {
-  .page-container {
-    font-size: 80%;
-  }
-}
-
-@media screen and (max-width: 757px) {
-  .page-container {
-    font-size: 70%;
+@media screen and (max-width: 1199px) {
+  .main {
+    width: 100vw;
   }
 }
 
@@ -327,6 +333,12 @@ html {
       -ms-flex-pack: center;
           justify-content: center;
   width: 75em;
+}
+
+@media screen and (max-width: 1199px) {
+  .inner_wide {
+    width: 100vw;
+  }
 }
 
 .fade-in-bottom {
@@ -498,8 +510,20 @@ html {
   text-shadow: 0 0 7px #098a8a;
 }
 
+@media screen and (max-width: 757px) {
+  .btn_go-to-howto {
+    margin: 0 auto;
+  }
+}
+
 .btn_go-to-howto .material-icons {
   font-size: 32px;
+}
+
+@media screen and (max-width: 757px) {
+  .btn_go-to-howto .material-icons {
+    font-size: 20px;
+  }
 }
 
 .btn-go-to-sub {
@@ -523,6 +547,14 @@ html {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  z-index: 9;
+}
+
+@media screen and (max-width: 1199px) {
+  .page-numbers {
+    left: 95%;
+    top: 90%;
+  }
 }
 
 .page-numbers li {
@@ -587,12 +619,6 @@ html {
 }
 
 @media screen and (max-width: 757px) {
-  .download-btn {
-    font-size: 1rem;
-  }
-}
-
-@media screen and (max-width: 757px) {
   .download-btn .material-icons {
     font-size: 100%;
   }
@@ -620,6 +646,7 @@ html {
   border: none;
   background-color: transparent;
   margin: 1em;
+  margin-right: 1.5em;
 }
 
 .btn_mobile-menu .material-icons {
@@ -627,7 +654,7 @@ html {
   font-size: 32px;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1199px) {
   .btn_mobile-menu {
     display: block;
   }
@@ -802,7 +829,7 @@ html {
   transition: 0.3s;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1199px) {
   .main-header {
     position: relative;
   }
@@ -828,7 +855,7 @@ html {
           justify-content: space-between;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1199px) {
   .header__wrap {
     width: 100vw;
     background-color: white;
@@ -842,7 +869,7 @@ html {
   font-size: 0;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1199px) {
   .logo_vaccine a img {
     width: 90%;
   }
@@ -861,13 +888,13 @@ html {
   width: 40%;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1199px) {
   .header__menu {
     display: block;
     width: 30%;
     height: 100vh;
     position: absolute;
-    top: 82%;
+    top: 80%;
     right: -30%;
     background: #e7d1ff;
     background: -webkit-gradient(linear, left top, left bottom, from(#e7d1ff), to(#6de1cd));
@@ -926,6 +953,34 @@ html {
   height: 100vh;
 }
 
+@media screen and (max-width: 1199px) {
+  .main_top {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 757px) {
+  .main_top {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .main__img {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 757px) {
+  .main__img {
+    width: 80%;
+  }
+}
+
+.main__img img {
+  width: 100%;
+}
+
 .main__info {
   width: 100%;
   margin-bottom: 8em;
@@ -940,6 +995,19 @@ html {
           align-items: center;
 }
 
+@media screen and (max-width: 757px) {
+  .main__info {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    text-align: center;
+  }
+}
+
 .main__info__subtitle {
   margin-bottom: 1rem;
   font-size: 1.2rem;
@@ -948,6 +1016,17 @@ html {
   -webkit-transform: translateY(50px);
           transform: translateY(50px);
   opacity: 0;
+}
+
+.main__text {
+  width: 50%;
+}
+
+@media screen and (max-width: 757px) {
+  .main__text {
+    margin-top: 2rem;
+    width: 90%;
+  }
 }
 
 .main__info__maintitle {
@@ -959,6 +1038,12 @@ html {
   opacity: 0;
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
+}
+
+@media screen and (max-width: 1199px) {
+  .main__info__maintitle {
+    font-size: 3rem;
+  }
 }
 
 .vaccine_count {
@@ -1037,6 +1122,12 @@ html {
           animation-delay: 0.7s;
 }
 
+@media screen and (max-width: 1199px) {
+  .vaccine__count__info .icon_upward {
+    font-size: 120%;
+  }
+}
+
 .--second {
   margin-left: 2em;
 }
@@ -1093,11 +1184,34 @@ html {
   margin-bottom: 5em;
 }
 
+@media screen and (max-width: 1199px) {
+  .main_howto {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 757px) {
+  .main_howto {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+}
+
 .section-title {
   -ms-flex-item-align: start;
       align-self: flex-start;
   font-size: 2rem;
   margin-bottom: 6rem;
+}
+
+@media screen and (max-width: 757px) {
+  .section-title {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-bottom: 3rem;
+  }
 }
 
 .howto-card-list {
@@ -1112,6 +1226,18 @@ html {
   margin-bottom: 6rem;
 }
 
+@media screen and (max-width: 757px) {
+  .howto-card-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .howto-card-list-item {
   width: 28%;
   padding: 2em 1.5em;
@@ -1121,17 +1247,37 @@ html {
           box-shadow: rgba(57, 119, 190, 0.1) 0px 19px 38px, rgba(57, 119, 190, 0.15) 0px 15px 12px;
 }
 
+@media screen and (max-width: 757px) {
+  .howto-card-list-item {
+    width: 60%;
+  }
+}
+
 .howto-card-list-item:not(:first-child) {
   margin-left: 4%;
 }
 
+@media screen and (max-width: 757px) {
+  .howto-card-list-item:not(:first-child) {
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+}
+
 .howto-card-list-item img {
+  width: 100%;
   margin-bottom: 3rem;
 }
 
 .howto-card-list-item figcaption {
   text-align: center;
   font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1199px) {
+  .howto-card-list-item figcaption {
+    font-size: 1rem;
+  }
 }
 
 footer {
@@ -1150,18 +1296,6 @@ footer {
           justify-content: center;
   font-size: 0.8rem;
   padding: 2em;
-}
-
-@media screen and (max-width: 1023px) {
-  footer {
-    margin-top: 2rem;
-  }
-}
-
-@media screen and (max-width: 757px) {
-  footer {
-    font-size: 80%;
-  }
 }
 
 .footer__links {
@@ -1225,7 +1359,7 @@ footer {
   margin: 2em auto;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1199px) {
   .sub-contents {
     width: 100vw;
     -webkit-box-orient: vertical;
@@ -1255,7 +1389,7 @@ footer {
   margin-top: 2em;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1199px) {
   .card-container {
     margin: 3rem 0;
   }
@@ -1266,7 +1400,7 @@ footer {
   position: relative;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1199px) {
   .card-img {
     width: 90%;
     font-size: 90%;
@@ -1278,6 +1412,7 @@ footer {
 }
 
 .card-img .check-vaccine {
+  width: 25%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1289,9 +1424,18 @@ footer {
   list-style: url("../img/card-som.png");
 }
 
+@media screen and (max-width: 480px) {
+  .card-img .check-vaccine {
+    top: 45%;
+    width: 30%;
+    list-style: url("../img/card-som_sm.png");
+  }
+}
+
 @media screen and (max-width: 757px) {
   .card-img .check-vaccine {
-    font-size: 10px;
+    width: 30%;
+    list-style: url("../img/card-som_m.png");
   }
 }
 
@@ -1303,6 +1447,12 @@ footer {
   margin-right: 3.5rem;
 }
 
+@media screen and (max-width: 757px) {
+  .card-img .check-vaccine .first-check {
+    margin-right: 3rem;
+  }
+}
+
 .card-img .check-vaccine .check-label {
   font-family: "Cafe24SsurroundAir";
   display: block;
@@ -1310,11 +1460,30 @@ footer {
   margin-right: 0.5rem;
 }
 
+@media screen and (max-width: 480px) {
+  .card-img .check-vaccine .check-label {
+    display: inline-block;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    font-size: 60%;
+    margin-right: 0.2rem;
+    position: relative;
+    left: -5px;
+  }
+}
+
 .card-img .check-vaccine label {
   width: 1.25rem;
   height: 1.25rem;
   cursor: pointer;
   position: relative;
+}
+
+@media screen and (max-width: 480px) {
+  .card-img .check-vaccine label {
+    left: -5px;
+  }
 }
 
 .card-img .check-vaccine label::after {
@@ -1328,17 +1497,11 @@ footer {
   background-color: white;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 480px) {
   .card-img .check-vaccine label::after {
-    width: 90%;
-    height: 90%;
-  }
-}
-
-@media screen and (max-width: 757px) {
-  .card-img .check-vaccine label::after {
-    width: 60%;
-    height: 60%;
+    width: 80%;
+    height: 80%;
+    border: 1px solid #b58ecc;
   }
 }
 
@@ -1354,10 +1517,24 @@ footer {
           transform: translate(-30%, -55%);
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1199px) {
   .card-img .check-vaccine label::before {
     -webkit-transform: translate(-30%, -60%);
             transform: translate(-30%, -60%);
+  }
+}
+
+@media screen and (max-width: 757px) {
+  .card-img .check-vaccine label::before {
+    -webkit-transform: translate(-30%, -60%);
+            transform: translate(-30%, -60%);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-img .check-vaccine label::before {
+    -webkit-transform: translate(-40%, -70%);
+            transform: translate(-40%, -70%);
   }
 }
 
@@ -1365,9 +1542,21 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 757px) {
+  .card-img .check-vaccine .checkbox:first-child {
+    margin-right: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-img .check-vaccine .checkbox:first-child {
+    margin-right: 0;
+  }
 }
 
 .card-img .check-vaccine input[type="checkbox"] {
@@ -1390,13 +1579,13 @@ footer {
   text-align: center;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1199px) {
   .card-img input#name {
     font-size: 1rem;
   }
 }
 
-@media screen and (max-width: 757px) {
+@media screen and (max-width: 480px) {
   .card-img input#name {
     font-size: 50%;
     top: 38%;
@@ -1419,7 +1608,7 @@ footer {
   font-size: 1rem;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1199px) {
   .card-img input#name::-webkit-input-placeholder {
     font-size: 1rem;
   }
@@ -1452,20 +1641,28 @@ footer {
 .card-text {
   font-family: "Cafe24SsurroundAir";
   font-size: 0.8rem;
+  display: block;
   position: absolute;
   left: 58%;
   top: 65%;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1199px) {
   .card-text {
-    font-size: 90%;
+    font-size: 100%;
   }
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 757px) {
   .card-text {
-    font-size: 50%;
+    left: 52%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-text {
+    -webkit-transform: scale(0.75);
+    left: 46%;
   }
 }
 
@@ -1481,7 +1678,7 @@ footer {
   position: relative;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1199px) {
   .dressup-btns {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1501,7 +1698,7 @@ footer {
   cursor: pointer;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1199px) {
   .dressup-btns > li {
     margin: 1rem;
   }
@@ -1510,8 +1707,6 @@ footer {
 @media screen and (max-width: 757px) {
   .dressup-btns > li {
     margin: 0.5rem;
-    width: 3rem;
-    height: 3rem;
   }
 }
 
@@ -1566,7 +1761,7 @@ footer {
   justify-self: flex-end;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1199px) {
   .sns_link {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1592,7 +1787,7 @@ footer {
   opacity: 1;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1199px) {
   .sns_link > li {
     margin: 1rem;
   }
@@ -1731,7 +1926,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0.5em;
+  padding: 0.5rem;
   width: 100%;
   border-bottom: 1px solid #c590ff;
 }
@@ -1743,10 +1938,11 @@ footer {
 .chara__custom .chara__custom__img {
   position: relative;
   width: 80%;
-  height: 60%;
+  height: 55%;
   border: 1px solid #76ebff;
-  border-radius: 1em;
-  margin: 1.5em auto;
+  border-radius: 1rem;
+  margin: 1.5rem auto;
+  overflow: hidden;
 }
 
 .chara__custom .chara__custom__img img {
@@ -1763,7 +1959,7 @@ footer {
   position: absolute;
   background: #c590ff;
   padding: 0.7em 0em;
-  border-radius: 0 1em 1em 0;
+  border-radius: 0 1rem 1rem 0;
   top: 50%;
   -webkit-transform: translateY(-25%);
           transform: translateY(-25%);
@@ -1773,6 +1969,12 @@ footer {
 .chara__custom .chara__custom__btn .material-icons {
   color: white;
   font-size: 36px;
+}
+
+@media screen and (max-width: 480px) {
+  .chara__custom .chara__custom__btn .material-icons {
+    font-size: 24px;
+  }
 }
 
 .chara__custom .chara__custom__btn:hover {
@@ -1785,14 +1987,14 @@ footer {
 
 .chara__custom .custom--prev {
   right: 100%;
-  border-radius: 1em 0 0 1em;
+  border-radius: 0.6rem 0 0 0.6rem;
 }
 
 #hair {
   top: 20%;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1199px) {
   #hair {
     top: 10%;
     left: 20%;
@@ -1803,7 +2005,7 @@ footer {
   top: 30%;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1199px) {
   #eyes {
     top: 10%;
     left: 30%;
@@ -1814,7 +2016,7 @@ footer {
   top: 40%;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1199px) {
   #mouth {
     top: 10%;
     left: 40%;
@@ -1825,7 +2027,7 @@ footer {
   top: 50%;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1199px) {
   #cloth {
     top: 10%;
     left: 50%;
@@ -1836,7 +2038,7 @@ footer {
   top: 60%;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1199px) {
   #accessory {
     top: 10%;
     left: 60%;

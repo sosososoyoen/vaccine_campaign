@@ -1,8 +1,14 @@
 .btn_go-to-howto {
   @include btn($color-mint, $color-mint);
   @extend %gradient2;
+  @include mobile {
+    margin: 0 auto;
+  }
   .material-icons {
     font-size: 32px;
+    @include mobile {
+      font-size: 20px;
+    }
   }
 }
 .btn-go-to-sub {
@@ -14,6 +20,11 @@
   left: 90%;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 9;
+  @include tablet {
+    left: 95%;
+    top: 90%;
+  }
   li {
     margin: 2em 0;
     a {
@@ -66,9 +77,6 @@
   font-size: 1.5rem;
   display: flex;
   align-items: center;
-  @include mobile {
-    font-size: 1rem;
-  }
   .material-icons {
     @include mobile {
       font-size: 100%;
@@ -94,6 +102,7 @@
   border: none;
   background-color: transparent;
   margin: 1em;
+  margin-right: 1.5em;
   .material-icons {
     color: $color-navy;
     font-size: 32px;

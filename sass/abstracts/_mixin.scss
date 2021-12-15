@@ -1,5 +1,10 @@
 @import "./variables";
 
+@mixin mobile-sm {
+  @media screen and (max-width: #{$breakpoint-mobile - 1px}) {
+    @content;
+  }
+}
 @mixin mobile {
   @media screen and (max-width: #{$breakpoint-tablet - 1px}) {
     @content;
