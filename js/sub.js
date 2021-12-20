@@ -187,7 +187,8 @@ function thumbUrl(id) {
     }
 }
 
-// 자바스크립트 기능 구현하기
+// sns 공유기능
+Kakao.init('60275652bb70080b75b0b61847ad6641');
 function shareSNS(sns) {
     const sendText = "백신 접종하고 나만의 인증서 만들자! #함께일상 #코로나백신인증"
     const sendUrl = "https://soonmac.github.io/vaccine_campaign/";
@@ -200,7 +201,6 @@ function shareSNS(sns) {
         window.open(url, "", "width=486, height=286");
     }
     if (sns == "kakaotalk") {
-        Kakao.init('60275652bb70080b75b0b61847ad6641');
         Kakao.Link.sendCustom({
             templateId: 677743,
             templateArgs: {
