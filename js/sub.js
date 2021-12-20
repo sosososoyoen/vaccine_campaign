@@ -200,6 +200,7 @@ function shareSNS(sns) {
         window.open(url, "", "width=486, height=286");
     }
     if (sns == "kakaotalk") {
+        Kakao.init('60275652bb70080b75b0b61847ad6641');
         Kakao.Link.sendCustom({
             templateId: 677743,
             templateArgs: {
