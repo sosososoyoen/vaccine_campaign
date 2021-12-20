@@ -200,7 +200,6 @@ function shareSNS(sns) {
         window.open(url, "", "width=486, height=286");
     }
     if (sns == "kakaotalk") {
-        // Kakao.init('60275652bb70080b75b0b61847ad6641');
         Kakao.Link.sendCustom({
             templateId: 677743,
             templateArgs: {
@@ -213,12 +212,7 @@ function shareSNS(sns) {
 
     }
 }
-//카카오톡 공유
-function shareKakao() {
 
-    // 카카오링크버튼 생성
-    Kakao
-}
 
 //url 복사 
 const urlInput = document.querySelector(".sns_link__copyurl")

@@ -941,6 +941,12 @@ html {
   opacity: 0;
 }
 
+@media screen and (max-width: 1199px) {
+  .menu__item {
+    font-size: 130%;
+  }
+}
+
 .menu__item:hover::after {
   opacity: 1;
   -webkit-transform: translate(-50%, -50%) scale(1);

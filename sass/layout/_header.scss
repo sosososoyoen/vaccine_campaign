@@ -82,6 +82,9 @@
     transition: 0.3s;
     opacity: 0;
   }
+  @include tablet {
+    font-size: 130%;
+  }
 }
 .menu__item:hover::after {
   opacity: 1;
