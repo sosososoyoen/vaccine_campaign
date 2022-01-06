@@ -1,6 +1,9 @@
+
 # VACCINE Campaign 
 나만의 백신 인증서 만들기 사이트(옷입히기 게임) 제작 
 https://soonmac.github.io/vaccine_campaign/
+![메인페이지](cap_05.PNG)
+
 
 ## 프로젝트 목표
 
