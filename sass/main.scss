@@ -20,6 +20,9 @@
 /* 헤더 */
 @import "layout/header";
 
+// 백신 통계
+@import "components/vaccineCard";
+
 //메인컨텐츠들
 @import "layout/maintop";
 @import "layout/howto";
@@ -29,3 +32,9 @@
 
 //서브
 @import "layout/sub";
+
+//서브
+@import "layout/sidebar";
+
+//카드
+@import "components/card"

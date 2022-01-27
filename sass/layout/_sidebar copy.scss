@@ -1,0 +1,106 @@
+.chara__custom__wrap {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  z-index: 5;
+  left: 10%;
+}
+.chara__custom {
+  position: relative;
+  width: 8.75rem;
+  height: 12.5rem;
+  background-color: white;
+  border: 2px solid $color-purple;
+  border-radius: 1em;
+
+  .chara__custom__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    width: 100%;
+    border-bottom: 1px solid $color-purple;
+
+    .material-icons {
+      cursor: pointer;
+    }
+  }
+  .chara__custom__img {
+    position: relative;
+    width: 80%;
+    height: 55%;
+    border: 1px solid $color-cyan;
+    border-radius: 1rem;
+    margin: 1.5rem auto;
+    overflow: hidden;
+    img {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .chara__custom__btn {
+    border: none;
+    position: absolute;
+    background: $color-purple;
+    padding: 0.7em 0em;
+    border-radius: 0 1rem 1rem 0;
+    top: 50%;
+    transform: translateY(-25%);
+    cursor: pointer;
+    .material-icons {
+      color: white;
+      font-size: 36px;
+      @include mobile-sm {
+        font-size: 24px;
+      }
+    }
+    &:hover {
+      background-color: darken($color-purple, 20%);
+    }
+  }
+  .custom--next {
+    left: 100%;
+  }
+  .custom--prev {
+    right: 100%;
+    border-radius: 0.6rem 0 0 0.6rem;
+  }
+}
+#hair {
+  top: 20%;
+  @include tablet {
+    top: 10%;
+    left: 20%;
+  }
+}
+#eyes {
+  top: 30%;
+  @include tablet {
+    top: 10%;
+    left: 30%;
+  }
+}
+#mouth {
+  top: 40%;
+  @include tablet {
+    top: 10%;
+    left: 40%;
+  }
+}
+#cloth {
+  top: 50%;
+  @include tablet {
+    top: 10%;
+    left: 50%;
+  }
+}
+#accessory {
+  top: 60%;
+  @include tablet {
+    top: 10%;
+    left: 60%;
+  }
+}

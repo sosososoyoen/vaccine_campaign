@@ -1,0 +1,76 @@
+.vaccine_count {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.vaccine_count_titleArea {
+  margin-bottom: 1.5em;
+  h5 {
+    display: inline-block;
+    @extend %titlefont;
+    font-size: 1.5rem;
+  }
+  .icon-live {
+    display: inline-block;
+    padding: 0.5em;
+    color: white;
+    border-radius: 0.8em;
+    background: $color-green;
+  }
+}
+.vaccine_count__wrap {
+  height: 50%;
+}
+.vaccine__counts {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+.vaccine__count__info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  span {
+    display: block;
+  }
+  .first-vaccine__numbers,
+  .second-vaccine__numbers,
+  .third-vaccine__numbers {
+    @extend %titlefont;
+    font-size: 1.6rem;
+    margin-top: 0.5em;
+    line-height: 1.6;
+    animation-delay: 0.7s;
+  }
+  .icon_upward {
+    @include tablet {
+      font-size: 120%;
+    }
+  }
+}
+.--second,
+.--third {
+  margin-left: 2em;
+}
+.first-vaccine__increase {
+  @include increase-style($color-lightblue);
+  animation-delay: 0.7s;
+}
+.second-vaccine__increase {
+  @include increase-style(#f1d7ff);
+  animation-delay: 0.7s;
+}
+.third-vaccine__increase {
+  @include increase-style(#a3ceff);
+  animation-delay: 0.7s;
+}
+.update-date {
+  position: absolute;
+  font-size: 0.8rem;
+  color: gray;
+  right: 0;
+  bottom: -2em;
+}

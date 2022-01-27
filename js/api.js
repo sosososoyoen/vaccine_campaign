@@ -24,14 +24,19 @@ function responseApi(){
     .then(res => res.json())
     .then(myJson => {
         const obj= myJson.data[0];
+        console.log(obj)
         const totalFirst = obj.totalFirstCnt.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
         const totalSecond = obj.totalSecondCnt.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        const totalthird = obj.totalThirdCnt.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
         const firstCount = obj.firstCnt.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
         const secondCount = obj.secondCnt.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        const thirdCnt = obj.thirdCnt.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
         document.querySelector(".first-vaccine__numbers").innerHTML = totalFirst;
         document.querySelector(".second-vaccine__numbers").innerHTML = totalSecond;
+        document.querySelector(".third-vaccine__numbers").innerHTML = totalthird;
         document.querySelector(".first-vaccine__increase__counts").innerHTML = firstCount
         document.querySelector(".second-vaccine__increase__counts").innerHTML = secondCount;
+        document.querySelector(".third-vaccine__increase__counts").innerHTML = thirdCnt;
         document.querySelector(".update-date").innerHTML = "기준: " + obj.baseDate;
     
     })

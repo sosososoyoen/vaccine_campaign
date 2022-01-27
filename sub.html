@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
     rel="stylesheet">
-    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.js" defer></script>
     <script src="js/button.js" defer></script>
     <script src="js/html2canvas.min.js" defer></script>
     <script src="js/sub.js" defer></script>
@@ -91,9 +91,11 @@
                                 </span>
                         </button>
                     </div>
-                    <!-- chara__custom -->
                 </div>
                 <!-- chara__custom__wrap -->
+
+
+
                 <section class="card-container">
                     <div id="capture" class="card-img">
                         <div class="character__area">
@@ -119,6 +121,14 @@
                                     <span class="check-label">2차</span>
                                     <input type="checkbox" name="vaccine" id="second" value="second">
                                     <label for="second">                                      
+                                    </label>
+                                </div>
+                            </li>
+                            <li class="third-check">
+                                <div class="checkbox">
+                                    <span class="check-label">3차</span>
+                                    <input type="checkbox" name="vaccine" id="third" value="third">
+                                    <label for="third">                                      
                                     </label>
                                 </div>
                             </li>

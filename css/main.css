@@ -194,8 +194,9 @@ html {
   background: linear-gradient(159deg, #e7d1ff 16%, #8cebfb 100%);
 }
 
-.point_gradient, .main__info__maintitle, .vaccine_count_titleArea h5, .vaccine__count__info .first-vaccine__numbers,
-.vaccine__count__info .second-vaccine__numbers, .section-title, .card-img input#name {
+.point_gradient, .vaccine_count_titleArea h5, .vaccine__count__info .first-vaccine__numbers,
+.vaccine__count__info .second-vaccine__numbers,
+.vaccine__count__info .third-vaccine__numbers, .main__info__maintitle, .section-title, .card-img input#name {
   font-family: "HSGaeulSenggak20";
 }
 
@@ -234,8 +235,9 @@ html {
   background: linear-gradient(159deg, #e7d1ff 16%, #8cebfb 100%);
 }
 
-.point_gradient, .main__info__maintitle, .vaccine_count_titleArea h5, .vaccine__count__info .first-vaccine__numbers,
-.vaccine__count__info .second-vaccine__numbers, .section-title, .card-img input#name {
+.point_gradient, .vaccine_count_titleArea h5, .vaccine__count__info .first-vaccine__numbers,
+.vaccine__count__info .second-vaccine__numbers,
+.vaccine__count__info .third-vaccine__numbers, .main__info__maintitle, .section-title, .card-img input#name {
   font-family: "HSGaeulSenggak20";
 }
 
@@ -953,6 +955,159 @@ html {
           transform: translate(-50%, -50%) scale(1);
 }
 
+.vaccine_count {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.vaccine_count_titleArea {
+  margin-bottom: 1.5em;
+}
+
+.vaccine_count_titleArea h5 {
+  display: inline-block;
+  font-size: 1.5rem;
+}
+
+.vaccine_count_titleArea .icon-live {
+  display: inline-block;
+  padding: 0.5em;
+  color: white;
+  border-radius: 0.8em;
+  background: #43dec8;
+}
+
+.vaccine_count__wrap {
+  height: 50%;
+}
+
+.vaccine__counts {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.vaccine__count__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.vaccine__count__info span {
+  display: block;
+}
+
+.vaccine__count__info .first-vaccine__numbers,
+.vaccine__count__info .second-vaccine__numbers,
+.vaccine__count__info .third-vaccine__numbers {
+  font-size: 1.6rem;
+  margin-top: 0.5em;
+  line-height: 1.6;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+@media screen and (max-width: 1199px) {
+  .vaccine__count__info .icon_upward {
+    font-size: 120%;
+  }
+}
+
+.--second,
+.--third {
+  margin-left: 2em;
+}
+
+.first-vaccine__increase {
+  background: #8ce9fa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 5px;
+  border-radius: 10px;
+  color: #066e81;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+.first-vaccine__increase .material-icons {
+  margin-left: 3px;
+}
+
+.second-vaccine__increase {
+  background: #f1d7ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 5px;
+  border-radius: 10px;
+  color: #8c00d7;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+.second-vaccine__increase .material-icons {
+  margin-left: 3px;
+}
+
+.third-vaccine__increase {
+  background: #a3ceff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 5px;
+  border-radius: 10px;
+  color: #004ca3;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+.third-vaccine__increase .material-icons {
+  margin-left: 3px;
+}
+
+.update-date {
+  position: absolute;
+  font-size: 0.8rem;
+  color: gray;
+  right: 0;
+  bottom: -2em;
+}
+
 .main_top {
   width: 100%;
   margin: 90px 0 0;
@@ -1050,138 +1205,6 @@ html {
   .main__info__maintitle {
     font-size: 3rem;
   }
-}
-
-.vaccine_count {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.vaccine_count_titleArea {
-  margin-bottom: 1.5em;
-}
-
-.vaccine_count_titleArea h5 {
-  display: inline-block;
-  font-size: 1.5rem;
-}
-
-.vaccine_count_titleArea .icon-live {
-  display: inline-block;
-  padding: 0.5em;
-  color: white;
-  border-radius: 0.8em;
-  background: #43dec8;
-}
-
-.vaccine_count__wrap {
-  height: 50%;
-}
-
-.vaccine__counts {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 1em;
-}
-
-.vaccine__count__info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.vaccine__count__info span {
-  display: block;
-}
-
-.vaccine__count__info .first-vaccine__numbers,
-.vaccine__count__info .second-vaccine__numbers {
-  font-size: 1.6rem;
-  margin-top: 0.5em;
-  line-height: 1.6;
-  -webkit-animation-delay: 0.7s;
-          animation-delay: 0.7s;
-}
-
-@media screen and (max-width: 1199px) {
-  .vaccine__count__info .icon_upward {
-    font-size: 120%;
-  }
-}
-
-.--second {
-  margin-left: 2em;
-}
-
-.first-vaccine__increase {
-  background: #8ce9fa;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0 5px;
-  border-radius: 10px;
-  color: #066e81;
-  -webkit-animation-delay: 0.7s;
-          animation-delay: 0.7s;
-}
-
-.first-vaccine__increase .material-icons {
-  margin-left: 3px;
-}
-
-.second-vaccine__increase {
-  background: #f1d7ff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0 5px;
-  border-radius: 10px;
-  color: #8c00d7;
-  -webkit-animation-delay: 0.7s;
-          animation-delay: 0.7s;
-}
-
-.second-vaccine__increase .material-icons {
-  margin-left: 3px;
-}
-
-.update-date {
-  position: absolute;
-  font-size: 0.8rem;
-  color: gray;
-  right: 0;
-  bottom: -2em;
 }
 
 .main_howto {
@@ -1378,308 +1401,6 @@ footer {
   }
 }
 
-.card-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.card-container .btn {
-  margin-top: 2em;
-}
-
-@media screen and (max-width: 1199px) {
-  .card-container {
-    margin: 3rem 0;
-  }
-}
-
-.card-img {
-  width: 50rem;
-  position: relative;
-}
-
-@media screen and (max-width: 1199px) {
-  .card-img {
-    width: 90%;
-    font-size: 90%;
-  }
-}
-
-.card-img img {
-  width: 100%;
-}
-
-.card-img .check-vaccine {
-  width: 25%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  top: 48%;
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
-  left: 65%;
-  list-style: url("../img/card-som.png");
-}
-
-@media screen and (max-width: 480px) {
-  .card-img .check-vaccine {
-    top: 45%;
-    width: 30%;
-    list-style: url("../img/card-som_sm.png");
-  }
-}
-
-@media screen and (max-width: 757px) {
-  .card-img .check-vaccine {
-    width: 30%;
-    list-style: url("../img/card-som_m.png");
-  }
-}
-
-.card-img .check-vaccine li {
-  display: list-item;
-}
-
-.card-img .check-vaccine .first-check {
-  margin-right: 3.5rem;
-}
-
-@media screen and (max-width: 757px) {
-  .card-img .check-vaccine .first-check {
-    margin-right: 3rem;
-  }
-}
-
-.card-img .check-vaccine .check-label {
-  font-family: "Cafe24SsurroundAir";
-  display: block;
-  font-size: 1.2rem;
-  margin-right: 0.5rem;
-}
-
-@media screen and (max-width: 480px) {
-  .card-img .check-vaccine .check-label {
-    display: inline-block;
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-    font-size: 60%;
-    margin-right: 0.2rem;
-    position: relative;
-    left: -5px;
-  }
-}
-
-.card-img .check-vaccine label {
-  width: 1.25rem;
-  height: 1.25rem;
-  cursor: pointer;
-  position: relative;
-}
-
-@media screen and (max-width: 480px) {
-  .card-img .check-vaccine label {
-    left: -5px;
-  }
-}
-
-.card-img .check-vaccine label::after {
-  content: "";
-  display: inline-block;
-  width: 1.25rem;
-  height: 1.25rem;
-  border: 2px solid #b58ecc;
-  margin-right: 0.5em;
-  border-radius: 50%;
-  background-color: white;
-}
-
-@media screen and (max-width: 480px) {
-  .card-img .check-vaccine label::after {
-    width: 80%;
-    height: 80%;
-    border: 1px solid #b58ecc;
-  }
-}
-
-.card-img .check-vaccine label::before {
-  display: none;
-  content: "\2713";
-  font-size: 2.3rem;
-  color: #0cbaba;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-30%, -55%);
-          transform: translate(-30%, -55%);
-}
-
-@media screen and (max-width: 1199px) {
-  .card-img .check-vaccine label::before {
-    -webkit-transform: translate(-30%, -60%);
-            transform: translate(-30%, -60%);
-  }
-}
-
-@media screen and (max-width: 757px) {
-  .card-img .check-vaccine label::before {
-    -webkit-transform: translate(-30%, -60%);
-            transform: translate(-30%, -60%);
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .card-img .check-vaccine label::before {
-    -webkit-transform: translate(-40%, -70%);
-            transform: translate(-40%, -70%);
-  }
-}
-
-.card-img .check-vaccine .checkbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-@media screen and (max-width: 757px) {
-  .card-img .check-vaccine .checkbox:first-child {
-    margin-right: 0.5rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .card-img .check-vaccine .checkbox:first-child {
-    margin-right: 0;
-  }
-}
-
-.card-img .check-vaccine input[type="checkbox"] {
-  display: none;
-}
-
-.card-img .check-vaccine input[type="checkbox"]:checked + label::before {
-  display: block;
-}
-
-.card-img input#name {
-  position: absolute;
-  top: 40%;
-  left: 65%;
-  border: none;
-  width: 16.2%;
-  font-size: 1.2rem;
-  color: #0c191f;
-  background: transparent;
-  text-align: center;
-}
-
-@media screen and (max-width: 1199px) {
-  .card-img input#name {
-    font-size: 1rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .card-img input#name {
-    font-size: 50%;
-    top: 38%;
-  }
-}
-
-.card-img input#name::-webkit-input-placeholder {
-  font-size: 1rem;
-}
-
-.card-img input#name:-ms-input-placeholder {
-  font-size: 1rem;
-}
-
-.card-img input#name::-ms-input-placeholder {
-  font-size: 1rem;
-}
-
-.card-img input#name::placeholder {
-  font-size: 1rem;
-}
-
-@media screen and (max-width: 1199px) {
-  .card-img input#name::-webkit-input-placeholder {
-    font-size: 1rem;
-  }
-  .card-img input#name:-ms-input-placeholder {
-    font-size: 1rem;
-  }
-  .card-img input#name::-ms-input-placeholder {
-    font-size: 1rem;
-  }
-  .card-img input#name::placeholder {
-    font-size: 1rem;
-  }
-}
-
-@media screen and (max-width: 757px) {
-  .card-img input#name::-webkit-input-placeholder {
-    font-size: 50%;
-  }
-  .card-img input#name:-ms-input-placeholder {
-    font-size: 50%;
-  }
-  .card-img input#name::-ms-input-placeholder {
-    font-size: 50%;
-  }
-  .card-img input#name::placeholder {
-    font-size: 50%;
-  }
-}
-
-.card-text {
-  font-family: "Cafe24SsurroundAir";
-  font-size: 0.8rem;
-  display: block;
-  position: absolute;
-  left: 58%;
-  top: 65%;
-}
-
-@media screen and (max-width: 1199px) {
-  .card-text {
-    font-size: 100%;
-  }
-}
-
-@media screen and (max-width: 757px) {
-  .card-text {
-    left: 52%;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .card-text {
-    -webkit-transform: scale(0.75);
-    left: 46%;
-  }
-}
-
-.card-text span {
-  display: none;
-}
-
-.card-text .card-text--first {
-  display: block;
-}
-
 .dressup-btns {
   position: relative;
 }
@@ -1872,39 +1593,6 @@ footer {
   display: block;
 }
 
-.character__area {
-  width: 22.8%;
-  height: 22.8%;
-  background-color: transparent;
-  position: absolute;
-  top: 37.5%;
-  left: 16%;
-}
-
-.character__area img {
-  position: absolute;
-}
-
-.character__area img.chara_eye {
-  z-index: 2;
-}
-
-.character__area img.chara_mouth {
-  z-index: 2;
-}
-
-.character__area img.chara_hair {
-  z-index: 3;
-}
-
-.character__area img.chara_cloth {
-  z-index: 4;
-}
-
-.character__area img.chara_accessory {
-  z-index: 4;
-}
-
 .chara__custom__wrap {
   visibility: hidden;
   opacity: 0;
@@ -2049,4 +1737,351 @@ footer {
     top: 10%;
     left: 60%;
   }
+}
+
+.card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-container .btn {
+  margin-top: 2em;
+}
+
+@media screen and (max-width: 1199px) {
+  .card-container {
+    margin: 3rem 0;
+  }
+}
+
+.card-img {
+  width: 50rem;
+  position: relative;
+}
+
+@media screen and (max-width: 1199px) {
+  .card-img {
+    width: 90%;
+    font-size: 90%;
+  }
+}
+
+.card-img img {
+  width: 100%;
+}
+
+.card-img .check-vaccine {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 48%;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  left: 60%;
+  list-style: url("../img/card-som.png");
+}
+
+@media screen and (max-width: 1199px) {
+  .card-img .check-vaccine {
+    left: 63%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-img .check-vaccine {
+    top: 45%;
+    width: 30%;
+    left: 55%;
+    list-style: url("../img/card-som_sm.png");
+  }
+}
+
+@media screen and (max-width: 757px) {
+  .card-img .check-vaccine {
+    width: 30%;
+    list-style: url("../img/card-som_sm.png");
+  }
+}
+
+.card-img .check-vaccine li {
+  display: list-item;
+}
+
+.card-img .check-vaccine > li:not(:last-child) {
+  margin-right: 2.5rem;
+}
+
+@media screen and (max-width: 1199px) {
+  .card-img .check-vaccine > li:not(:last-child) {
+    margin-right: 3rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-img .check-vaccine > li:not(:last-child) {
+    margin-right: 2rem;
+  }
+}
+
+.card-img .check-vaccine .check-label {
+  font-family: "Cafe24SsurroundAir";
+  display: block;
+  margin-right: 0.5rem;
+}
+
+@media screen and (max-width: 480px) {
+  .card-img .check-vaccine .check-label {
+    display: inline-block;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    font-size: 60%;
+    margin-right: 0.2rem;
+    position: relative;
+    left: -5px;
+  }
+}
+
+.card-img .check-vaccine label {
+  width: 1.25rem;
+  height: 1.25rem;
+  cursor: pointer;
+  position: relative;
+}
+
+@media screen and (max-width: 480px) {
+  .card-img .check-vaccine label {
+    left: -5px;
+  }
+}
+
+.card-img .check-vaccine label::after {
+  content: "";
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid #b58ecc;
+  margin-right: 0.5em;
+  border-radius: 50%;
+  background-color: white;
+}
+
+@media screen and (max-width: 480px) {
+  .card-img .check-vaccine label::after {
+    width: 80%;
+    height: 80%;
+    border: 1px solid #b58ecc;
+  }
+}
+
+.card-img .check-vaccine label::before {
+  display: none;
+  content: "\2713";
+  font-size: 2.3rem;
+  color: #0cbaba;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-30%, -55%);
+          transform: translate(-30%, -55%);
+}
+
+@media screen and (max-width: 1199px) {
+  .card-img .check-vaccine label::before {
+    -webkit-transform: translate(-30%, -60%);
+            transform: translate(-30%, -60%);
+  }
+}
+
+@media screen and (max-width: 757px) {
+  .card-img .check-vaccine label::before {
+    -webkit-transform: translate(-30%, -60%);
+            transform: translate(-30%, -60%);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-img .check-vaccine label::before {
+    -webkit-transform: translate(-40%, -70%);
+            transform: translate(-40%, -70%);
+  }
+}
+
+.card-img .check-vaccine .checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 757px) {
+  .card-img .check-vaccine .checkbox:not(:first-child) {
+    margin-left: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-img .check-vaccine .checkbox:not(:first-child) {
+    margin-left: 0;
+  }
+}
+
+.card-img .check-vaccine input[type="checkbox"] {
+  display: none;
+}
+
+.card-img .check-vaccine input[type="checkbox"]:checked + label::before {
+  display: block;
+}
+
+.card-img input#name {
+  position: absolute;
+  top: 40%;
+  left: 65%;
+  border: none;
+  width: 16.2%;
+  font-size: 1.2rem;
+  color: #0c191f;
+  background: transparent;
+  text-align: center;
+}
+
+@media screen and (max-width: 1199px) {
+  .card-img input#name {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-img input#name {
+    font-size: 50%;
+    top: 38%;
+  }
+}
+
+.card-img input#name::-webkit-input-placeholder {
+  font-size: 1rem;
+}
+
+.card-img input#name:-ms-input-placeholder {
+  font-size: 1rem;
+}
+
+.card-img input#name::-ms-input-placeholder {
+  font-size: 1rem;
+}
+
+.card-img input#name::placeholder {
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 1199px) {
+  .card-img input#name::-webkit-input-placeholder {
+    font-size: 1rem;
+  }
+  .card-img input#name:-ms-input-placeholder {
+    font-size: 1rem;
+  }
+  .card-img input#name::-ms-input-placeholder {
+    font-size: 1rem;
+  }
+  .card-img input#name::placeholder {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 757px) {
+  .card-img input#name::-webkit-input-placeholder {
+    font-size: 50%;
+  }
+  .card-img input#name:-ms-input-placeholder {
+    font-size: 50%;
+  }
+  .card-img input#name::-ms-input-placeholder {
+    font-size: 50%;
+  }
+  .card-img input#name::placeholder {
+    font-size: 50%;
+  }
+}
+
+.card-text {
+  font-family: "Cafe24SsurroundAir";
+  font-size: 0.8rem;
+  display: block;
+  position: absolute;
+  left: 58%;
+  top: 65%;
+}
+
+@media screen and (max-width: 1199px) {
+  .card-text {
+    font-size: 100%;
+  }
+}
+
+@media screen and (max-width: 757px) {
+  .card-text {
+    left: 52%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-text {
+    -webkit-transform: scale(0.75);
+    left: 46%;
+  }
+}
+
+.card-text span {
+  display: none;
+}
+
+.card-text .card-text--first {
+  display: block;
+}
+
+.character__area {
+  width: 22.8%;
+  height: 22.8%;
+  background-color: transparent;
+  position: absolute;
+  top: 37.5%;
+  left: 16%;
+}
+
+.character__area img {
+  position: absolute;
+}
+
+.character__area img.chara_eye {
+  z-index: 2;
+}
+
+.character__area img.chara_mouth {
+  z-index: 2;
+}
+
+.character__area img.chara_hair {
+  z-index: 3;
+}
+
+.character__area img.chara_cloth {
+  z-index: 4;
+}
+
+.character__area img.chara_accessory {
+  z-index: 4;
 }
