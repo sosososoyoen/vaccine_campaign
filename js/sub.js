@@ -202,13 +202,7 @@ function shareSNS(sns) {
     }
     if (sns == "kakaotalk") {
         Kakao.Link.sendCustom({
-            templateId:70191,
-            templateArgs: {
-                title:
-                    '백신 접종하고 나만의 백신 접종 인증서 만들자!',
-                description:
-                    '#함께일상 #코로나백신인증',
-            },
+            templateId:70191
         })
 
     }
